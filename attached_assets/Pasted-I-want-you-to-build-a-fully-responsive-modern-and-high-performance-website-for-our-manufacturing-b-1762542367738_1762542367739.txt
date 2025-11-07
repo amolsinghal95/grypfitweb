@@ -1,0 +1,159 @@
+I want you to build a fully responsive, modern, and high-performance website for our manufacturing brand GRYPFIT, using Next.js (App Router) and Tailwind CSS.
+
+The website is purely frontend-based (no backend, no database, no payment) and its goal is to showcase our company, products, and contact information beautifully — like a professional industrial product catalog.
+
+🏭 Business Overview
+
+Brand: GRYPFIT (by Singhal Industries)
+Tagline: Precision. Strength. Trust. — Crafting quality spare parts since 1995
+About Us:
+Singhal Industries (now brand name GRYPFIT) is a trusted manufacturer of spare parts for gym machines and a range of sports equipment. With a legacy built on quality, innovation, and customer trust, we aim to deliver durable and precision-engineered components that power fitness and performance equipment across India.
+
+What We Do:
+
+🏋️ Gym Machine Parts — precision components like pulleys, plates, joints, and handles for gym equipment manufacturers and service providers.
+
+🏸 Sports Equipment Parts — from table tennis and cricket plastic bats to fitness tools, we craft durable parts used in sports and recreational equipment.
+
+Why Choose Us:
+✔️ 25+ years of experience
+✔️ Serving top gym brands across India
+✔️ Custom and bulk manufacturing
+✔️ Fast delivery & excellent post-sales support
+
+Address: Singhal Industries, Mohkampur Phase 1, Meerut, India
+Phone: +91-8449291260
+Email: amolsinghal95@gmail.com
+
+Domain: www.gryp.fit
+
+🧩 Pages Required
+
+Home Page
+
+Hero section with GRYPFIT tagline and industrial product imagery.
+
+Highlight categories: “Gym”, “Sports”, “Plates & Weights”.
+
+Quick call-to-action buttons (View Products, Contact Us).
+
+About Us Page
+
+Include company story, journey, and achievements (timeline style).
+
+Add sections for “Who We Are”, “What We Do”, “Why Choose Us”.
+
+Products Page
+
+Fetch product data from a local file: /data/products.json.
+
+Each product card shows image, title, short description, price, and category.
+
+Include search + category filter (client-side).
+
+When clicked, open a product detail modal or page.
+
+Add placeholder images that can be replaced easily (e.g., /public/products/pulley1.jpg).
+
+Include simple instructions in README on how to add/edit/delete products via JSON (no code editing needed).
+
+Contact Page
+
+Display address, map embed (Google Maps), phone, and email.
+
+Add a contact form (static) that opens “mailto:” when submitted.
+
+Include a floating WhatsApp chat button linking to +91-8449291260.
+
+Footer (global)
+
+GRYPFIT © 2025 — All rights reserved
+
+Quick links to Home, About, Products, Contact
+
+Social icons (WhatsApp, Email)
+
+🎨 Design & Theme
+
+Style: Industrial + Modern
+
+Colors: Dark grey background (#1C1C1C), metallic blue (#0070F3) accents, white text
+
+Typography: Clean sans-serif (e.g., Inter, Poppins)
+
+Layout: Grid-based, responsive for all devices
+
+Animations: Subtle fade-ins and hover effects using Framer Motion
+
+⚙️ Technical Requirements
+
+Framework: Next.js 14+ (App Router)
+
+Styling: Tailwind CSS + Framer Motion for animations
+
+Component System: Use reusable components (Header, Footer, ProductCard, ProductGrid, etc.)
+
+SEO: Add meta tags for each page (title, description, OG image placeholders)
+
+Assets: Store all images under /public/ and product data in /data/products.json
+
+Hosting: Prepare for Vercel deployment
+
+README: Add clear steps for updating product list, changing logo/images, and connecting the custom domain
+
+📦 Example Product Data (seed JSON)
+
+Use this to seed /data/products.json:
+
+[
+  {
+    "id": 1,
+    "title": "Gym Cable Pulley",
+    "sku": "GCP001",
+    "price": "₹499",
+    "shortDescription": "Heavy-duty pulley for gym machines",
+    "longDescription": "Durable steel pulley for smooth motion in cable systems.",
+    "category": "Gym",
+    "image": "/products/pulley1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Weight Plate Set",
+    "sku": "WPS002",
+    "price": "₹899",
+    "shortDescription": "Standard iron plates for gym training",
+    "longDescription": "Precision-balanced iron plates with enamel finish for long-lasting use.",
+    "category": "Plates & Weights",
+    "image": "/products/plate1.jpg"
+  }
+]
+
+✅ Deliverables Checklist
+
+/app or /src folder with Next.js pages
+
+/data/products.json with sample data
+
+/components/ folder for modular UI elements
+
+/public/ folder for logo + placeholder images
+
+README.md with “How to update products easily” section
+
+SEO metadata for all pages
+
+Working Vercel-ready configuration
+
+🧠 Summary
+
+The website should feel premium, clean, and robust, focusing on quality and legacy — suitable for a long-established Indian manufacturing brand.
+
+After generation, I should be able to:
+
+Add or edit products by simply editing data/products.json.
+
+Replace images in the public/products/ folder.
+
+Deploy directly to Vercel and connect my domain www.gryp.fit.
+
+End of Prompt 🚀
