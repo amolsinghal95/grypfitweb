@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Gym Cable Pulley",
+    "sku": "GCP001",
+    "price": "₹499",
+    "shortDescription": "Heavy-duty pulley for gym machines",
+    "longDescription": "Durable steel pulley designed for smooth motion in cable systems. Features precision bearings and rust-resistant coating for long-lasting performance in commercial gym environments.",
+    "category": "Gym",
+    "image": "/products/pulley1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Weight Plate Set",
+    "sku": "WPS002",
+    "price": "₹899",
+    "shortDescription": "Standard iron plates for gym training",
+    "longDescription": "Precision-balanced iron plates with enamel finish for long-lasting use. Available in various weights, perfect for professional gym setups and home fitness centers.",
+    "category": "Plates & Weights",
+    "image": "/products/plate1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Barbell Handle",
+    "sku": "BBH003",
+    "price": "₹1,299",
+    "shortDescription": "Professional chrome barbell handle",
+    "longDescription": "High-quality chrome-plated barbell handle with knurled grip. Engineered for strength and durability, suitable for heavy-duty commercial gym use.",
+    "category": "Gym",
+    "image": "/products/barbell1.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Bench Press Joint",
+    "sku": "BPJ004",
+    "price": "₹699",
+    "shortDescription": "Adjustable bench press joint mechanism",
+    "longDescription": "Robust steel joint mechanism for bench press equipment. Features smooth angle adjustment and secure locking system for safety and versatility.",
+    "category": "Gym",
+    "image": "/products/joint1.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Table Tennis Bat Set",
+    "sku": "TTB005",
+    "price": "₹349",
+    "shortDescription": "Plastic table tennis training bats",
+    "longDescription": "Durable plastic table tennis bats perfect for training and recreational play. Lightweight design with comfortable grip, ideal for schools and sports clubs.",
+    "category": "Sports",
+    "image": "/products/ttbat1.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Cricket Practice Bat",
+    "sku": "CPB006",
+    "price": "₹449",
+    "shortDescription": "Lightweight plastic cricket bat",
+    "longDescription": "High-quality plastic cricket bat designed for practice sessions. Ideal for coaching academies and recreational play, featuring ergonomic handle design.",
+    "category": "Sports",
+    "image": "/products/cbat1.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Dumbell Connector",
+    "sku": "DBC007",
+    "price": "₹299",
+    "shortDescription": "Universal dumbell connector piece",
+    "longDescription": "Versatile connector piece for dumbell assemblies. Made from high-grade steel with precision threading for secure weight plate attachment.",
+    "category": "Gym",
+    "image": "/products/connector1.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Olympic Weight Plate",
+    "sku": "OWP008",
+    "price": "₹1,499",
+    "shortDescription": "Olympic standard weight plate",
+    "longDescription": "Professional Olympic weight plate with 2-inch center hole. Rubber-coated for floor protection and noise reduction. Available in multiple weight options.",
+    "category": "Plates & Weights",
+    "image": "/products/oplate1.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Lat Pulldown Handle",
+    "sku": "LPH009",
+    "price": "₹599",
+    "shortDescription": "Ergonomic lat pulldown handle",
+    "longDescription": "Contoured lat pulldown handle with non-slip rubber grips. Designed for optimal muscle engagement and comfortable grip during intense workouts.",
+    "category": "Gym",
+    "image": "/products/lathandle1.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Resistance Band Hook",
+    "sku": "RBH010",
+    "price": "₹199",
+    "shortDescription": "Heavy-duty band attachment hook",
+    "longDescription": "Reinforced steel hook for resistance band attachments. Features smooth finish to prevent band wear and secure mounting mechanism.",
+    "category": "Sports",
+    "image": "/products/hook1.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Cable Attachment D-Handle",
+    "sku": "CAD011",
+    "price": "₹549",
+    "shortDescription": "Chrome D-handle cable attachment",
+    "longDescription": "Premium chrome-plated D-handle for cable machines. Ergonomic design with textured grips for superior control during exercises.",
+    "category": "Gym",
+    "image": "/products/dhandle1.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Gym Flooring Connector",
+    "sku": "GFC012",
+    "price": "₹89",
+    "shortDescription": "Interlocking floor mat connector",
+    "longDescription": "Durable plastic connector for interlocking gym floor mats. Ensures seamless flooring installation with secure grip and easy assembly.",
+    "category": "Gym",
+    "image": "/products/flooring1.jpg"
+  }
+]
