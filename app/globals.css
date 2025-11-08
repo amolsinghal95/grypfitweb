@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---------- THEME COLORS (Light) ---------- */
 :root {
-  --background: #1C1C1C;
-  --foreground: #FFFFFF;
-  --primary: #0070F3;
+  --background: #FFFFFF;        /* page background */
+  --foreground: #111111;        /* primary text */
+  --primary: #0b5cff;           /* brand accent */
+  --secondary: #f5f7fb;         /* light card/bg tone */
+  --muted-rgb: 34, 37, 41;      /* for rgba muted text */
+  --muted: rgba(var(--muted-rgb), 0.6);
+  --border-muted: rgba(var(--muted-rgb), 0.12);
 }
 
+/* ---------- GLOBAL RESET ---------- */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -20,13 +26,35 @@ body {
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* links */
 a {
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover { color: color-mix(in srgb, var(--primary) 70%, black); }
+
+/* Small utility classes that map to CSS variables (keeps your TSX clean) */
+.bg-background { background-color: var(--background); }
+.text-foreground { color: var(--foreground); }
+.text-primary { color: var(--primary); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.text-muted { color: var(--muted); }
+.border-muted { border-color: var(--border-muted); }
+
+/* Helpful border / card defaults */
+.card {
+  background: var(--background);
+  border: 1px solid var(--border-muted);
+  border-radius: 0.75rem;
 }
 
+/* Tailwind custom utility example kept */
 @layer utilities {
   .text-balance {
     text-wrap: balance;

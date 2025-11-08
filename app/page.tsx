@@ -28,9 +28,10 @@ export default function Home() {
 
   return (
     <div className="bg-background">
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
-        
+
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -46,23 +47,24 @@ export default function Home() {
             >
               <span className="text-primary">GRYPFIT</span>
             </motion.h1>
-            
+
             <motion.p
-              className="text-xl md:text-3xl text-gray-300 mb-4"
+              className="text-xl md:text-3xl text-muted mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               Precision. Strength. Trust.
             </motion.p>
-            
+
             <motion.p
-              className="text-lg md:text-xl text-gray-400 mb-12"
+              className="text-lg md:text-xl text-muted mb-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Crafting quality spare parts since 1995
+              Crafting quality spare parts for gym machines and sports equipment since
+              1995
             </motion.p>
 
             <motion.div
@@ -88,7 +90,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary/50">
+      {/* ===== Our Product Categories Section (Enhanced) ===== */}
+      <section className="py-20 bg-gradient-to-br from-[#f8fafc] via-[#eef3f7] to-[#e9eff5]">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -97,10 +100,14 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">Our Product Categories</h2>
-            <p className="text-gray-400 text-lg">
-              Premium quality components for fitness and sports equipment
+            <h2 className="text-4xl font-bold mb-4 text-slate-800 drop-shadow-sm">
+              Our Product <span className="text-primary">Categories</span>
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+              Premium quality components for fitness and sports equipment — built for
+              precision, performance, and reliability.
             </p>
+            <div className="w-20 h-[3px] bg-primary mx-auto mt-6 rounded-full"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -109,19 +116,21 @@ export default function Home() {
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
               >
                 <Link href={category.link}>
                   <motion.div
-                    className="bg-background border border-gray-700 rounded-lg p-8 text-center hover:border-primary transition-all cursor-pointer"
-                    whileHover={{ y: -10, scale: 1.02 }}
+                    className="bg-white/90 backdrop-blur-md border border-gray-200 rounded-xl p-8 text-center hover:shadow-xl hover:border-primary transition-all cursor-pointer"
+                    whileHover={{ y: -8, scale: 1.02 }}
                   >
                     <div className="text-primary mb-4 flex justify-center">
                       {category.icon}
                     </div>
-                    <h3 className="text-2xl font-semibold mb-3">{category.title}</h3>
-                    <p className="text-gray-400">{category.description}</p>
+                    <h3 className="text-2xl font-semibold mb-3 text-slate-800">
+                      {category.title}
+                    </h3>
+                    <p className="text-slate-600">{category.description}</p>
                   </motion.div>
                 </Link>
               </motion.div>
@@ -130,6 +139,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== Why Choose GRYPFIT Section ===== */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -145,28 +155,36 @@ export default function Home() {
                   <span className="text-primary mr-3 text-2xl">✓</span>
                   <div>
                     <h3 className="font-semibold text-lg">25+ Years of Experience</h3>
-                    <p className="text-gray-400">Trusted legacy in manufacturing excellence</p>
+                    <p className="text-muted">
+                      Trusted legacy in manufacturing excellence
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-3 text-2xl">✓</span>
                   <div>
                     <h3 className="font-semibold text-lg">Top Gym Brands Trust Us</h3>
-                    <p className="text-gray-400">Serving leading fitness equipment manufacturers across India</p>
+                    <p className="text-muted">
+                      Serving leading fitness equipment manufacturers across India
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-3 text-2xl">✓</span>
                   <div>
-                    <h3 className="font-semibold text-lg">Custom & Bulk Manufacturing</h3>
-                    <p className="text-gray-400">Tailored solutions for your specific needs</p>
+                    <h3 className="font-semibold text-lg">
+                      Custom & Bulk Manufacturing
+                    </h3>
+                    <p className="text-muted">
+                      Tailored solutions for your specific needs
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-3 text-2xl">✓</span>
                   <div>
                     <h3 className="font-semibold text-lg">Fast Delivery & Support</h3>
-                    <p className="text-gray-400">Reliable service you can count on</p>
+                    <p className="text-muted">Reliable service you can count on</p>
                   </div>
                 </li>
               </ul>
@@ -177,12 +195,12 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-secondary border border-gray-700 rounded-lg p-8"
+              className="bg-secondary border border-muted rounded-lg p-8"
             >
               <h3 className="text-2xl font-bold mb-6 text-primary">Get in Touch</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to discuss your requirements? We're here to help with custom solutions
-                and bulk orders.
+              <p className="text-muted mb-6">
+                Ready to discuss your requirements? We're here to help with custom
+                solutions and bulk orders.
               </p>
               <div className="space-y-4">
                 <a

@@ -3,9 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "@/components/ProductCard";
-import ProductModal from "@/components/ProductModal";
 import { HiSearch } from "react-icons/hi";
 import products from "@/data/products.json";
+import dynamic from "next/dynamic";
+
+// Client-only modal — dynamic import with ssr: false
+const ProductModal = dynamic(() => import("@/components/ProductModal"), { ssr: false });
 
 interface Product {
   id: number;
@@ -65,7 +68,7 @@ export default function Products() {
           <h1 className="text-5xl font-bold mb-4">
             Our <span className="text-primary">Products</span>
           </h1>
-          <p className="text-xl text-gray-400">
+          <p className="text-xl text-muted">
             Premium quality components for fitness and sports equipment
           </p>
         </motion.div>
@@ -78,31 +81,35 @@ export default function Products() {
         >
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <div className="flex-1 relative">
-              <HiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
+              <HiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted text-xl" />
               <input
                 type="text"
                 placeholder="Search products by name, SKU, or description..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-secondary border border-gray-700 rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors"
+                className="w-full pl-12 pr-4 py-3 bg-secondary border border-muted rounded-lg text-foreground focus:outline-none focus:border-primary transition-colors"
               />
             </div>
           </div>
 
           <div className="flex flex-wrap gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                  selectedCategory === category
-                    ? "bg-primary text-white"
-                    : "bg-secondary text-gray-400 hover:text-foreground hover:border-primary border border-gray-700"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+            {categories.map((category) => {
+              const selected = selectedCategory === category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-2 rounded-lg font-medium border transition-all duration-300 ease-in-out
+                    ${
+                      selected
+                        ? "bg-primary text-white border-primary shadow-sm hover:bg-blue-600 hover:shadow-md"
+                        : "bg-secondary text-foreground opacity-80 border-muted hover:opacity-100 hover:text-black hover:bg-primary/10 hover:border-primary"
+                    }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -112,9 +119,7 @@ export default function Products() {
             animate={{ opacity: 1 }}
             className="text-center py-20"
           >
-            <p className="text-gray-400 text-xl">
-              No products found matching your criteria.
-            </p>
+            <p className="text-muted text-xl">No products found matching your criteria.</p>
           </motion.div>
         ) : (
           <motion.div
@@ -130,19 +135,16 @@ export default function Products() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
               >
-                <ProductCard
-                  {...product}
-                  onClick={() => setSelectedProduct(product)}
-                />
+                <ProductCard {...product} onClick={() => setSelectedProduct(product)} />
               </motion.div>
             ))}
           </motion.div>
         )}
 
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
+        {/* IMPORTANT: only render ProductModal when a product is selected */}
+        {selectedProduct && (
+          <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+        )}
       </div>
     </div>
   );

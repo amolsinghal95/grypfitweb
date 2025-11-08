@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-background/95 backdrop-blur-sm border-b border-secondary/30 sticky top-0 z-50">
+    <header className="bg-background backdrop-blur-sm border border-muted sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
@@ -26,9 +26,9 @@ export default function Header() {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-2xl md:text-3xl font-bold text-primary">
-                GRYPFIT
+                GRYP.FIT
               </h1>
-              <p className="text-xs text-gray-400 hidden md:block">
+              <p className="text-xs text-muted hidden md:block">
                 By Singhal Industries
               </p>
             </motion.div>
