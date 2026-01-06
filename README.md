@@ -6,7 +6,7 @@ A modern, fully responsive website for GRYPFIT (Singhal Industries), showcasing 
 
 **Brand:** GRYPFIT (by Singhal Industries)  
 **Tagline:** Precision. Strength. Trust. — Crafting quality spare parts since 1995  
-**Website:** www.gryp.fit
+**Website:** grypfitweb.vercel.app , www.gryp.fit
 
 GRYPFIT is a trusted manufacturer of spare parts for gym machines and sports equipment, serving top brands across India with 25+ years of experience.
 
