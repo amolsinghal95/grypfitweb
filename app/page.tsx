@@ -45,7 +45,7 @@ export default function Home() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="text-primary">GRYPFIT</span>
+              <span className="text-primary">GRYP.FIT</span>
             </motion.h1>
 
             <motion.p
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Why Choose GRYPFIT Section ===== */}
+      {/* ===== Why Choose GRYP.FIT Section ===== */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -149,7 +149,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold mb-6">Why Choose GRYPFIT?</h2>
+              <h2 className="text-4xl font-bold mb-6">Why Choose GRYP.FIT?</h2>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="text-primary mr-3 text-2xl">✓</span>

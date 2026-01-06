@@ -1,68 +1,133 @@
+// components/ProductCard.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import Image from "next/image";
+import { FiMoreHorizontal } from "react-icons/fi";
+
+interface Dimensions {
+  length: number;
+  width: number;
+  height: number;
+  unit?: string;
+}
 
 interface ProductCardProps {
   id: number;
   title: string;
   sku: string;
   price: string;
-  shortDescription: string;
-  category: string;
-  image: string;
-  onClick: () => void;
+  shortDescription?: string;
+  image?: string;
+  category?: string;
+  weight?: { value: number; unit: string };
+  dimensions?: Dimensions;
+  onClick?: () => void;
 }
 
 export default function ProductCard({
+  id,
   title,
   sku,
   price,
   shortDescription,
-  category,
   image,
+  category,
+  weight,
+  dimensions,
   onClick,
 }: ProductCardProps) {
+  const [imgError, setImgError] = useState(false);
+
+  const onKey = (e: React.KeyboardEvent) => {
+    if (!onClick) return;
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
+  const renderDimensions = (d: Dimensions) => {
+    const unit = d.unit ?? "cm";
+    return `${d.length}×${d.width}×${d.height} ${unit}`;
+  };
+
+  const src = !imgError && image ? image : "/images/placeholder.jpg";
+
   return (
-    <motion.div
-      className="bg-secondary rounded-lg overflow-hidden shadow-md cursor-pointer border border-muted hover:border-primary transition-all duration-300"
-      whileHover={{ y: -5, scale: 1.02 }}
+    <article
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
       onClick={onClick}
+      onKeyDown={onKey}
+      className="group cursor-pointer bg-secondary border border-muted rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+      aria-label={`Open details for ${title}`}
     >
-      {/* Product Image */}
-      <div className="relative w-full h-48 bg-secondary/80">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = "/images/placeholder.jpg";
-          }}
-        />
-      </div>
+      <div className="relative h-48 w-full bg-white flex items-center justify-center">
+  <Image
+    src={src}
+    alt={title}
+    fill
+    sizes="(max-width: 768px) 100vw, 33vw"
+    className="object-contain p-3"
+  />
 
-      {/* Product Details */}
+  {/* hidden native img (reliable onError) */}
+  {!imgError && image && (
+    <img
+      src={image}
+      alt=""
+      style={{ display: "none" }}
+      onError={() => setImgError(true)}
+    />
+  )}
+</div>
+
+
+      {/* CONTENT */}
       <div className="p-4">
-        <div className="flex justify-between items-start mb-2">
-          <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-          <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
-            {category}
-          </span>
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <h3 className="text-lg font-semibold truncate">{title}</h3>
+            {shortDescription ? <p className="text-xs text-muted truncate">{shortDescription}</p> : null}
+          </div>
+
+          <div className="flex flex-col items-end gap-2">
+            <div className="text-sm text-muted">SKU: {sku}</div>
+            <div className="text-xl font-bold text-primary">{price}</div>
+          </div>
         </div>
 
-        <p className="text-xs text-muted mb-2">SKU: {sku}</p>
-        <p className="text-sm text-muted mb-3">{shortDescription}</p>
+        <div className="mt-3 flex items-center justify-between">
+          <div className="flex items-center gap-2 text-xs">
+            {category && (
+              <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                {category}
+              </span>
+            )}
+            {weight && (
+              <span className="text-xs text-muted">• {weight.value}{weight.unit}</span>
+            )}
+            {dimensions && (
+              <span className="text-xs text-muted">• {renderDimensions(dimensions)}</span>
+            )}
+          </div>
 
-        <div className="flex justify-between items-center">
-          <span className="text-xl font-bold text-primary">{price}</span>
-          <button className="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded text-sm transition-colors">
-            View Details
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                if (onClick) onClick();
+              }}
+              className="p-2 rounded hover:bg-primary/5 text-muted"
+              aria-label={`Open details for ${title}`}
+              title="More details"
+            >
+              <FiMoreHorizontal />
+            </button>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </article>
   );
 }

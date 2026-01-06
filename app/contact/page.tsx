@@ -38,6 +38,20 @@ export default function Contact() {
     });
   };
 
+  // LOCATION constants — updated from your Maps link
+const LAT = 28.9497921;
+const LNG = 77.67162;
+const PLACE_NAME = "GRYP.FIT - Singhal Industries";
+
+// Embed that uses a q=lat,lng query (usually shows a pin)
+const embedSrc = `https://www.google.com/maps?q=${LAT},${LNG}&z=17&output=embed`;
+
+// External links
+const googleMapsPlaceUrl = `https://www.google.com/maps/search/?api=1&query=${LAT},${LNG}`;
+const googleMapsDirections = `https://www.google.com/maps/dir/?api=1&destination=${LAT},${LNG}&travelmode=driving`;
+const appleMapsUrl = `https://maps.apple.com/?daddr=${LAT},${LNG}&q=${encodeURIComponent(PLACE_NAME)}`;
+const geoUrl = `geo:${LAT},${LNG}?q=${LAT},${LNG}(${encodeURIComponent(PLACE_NAME)})`;
+
   return (
     <div className="bg-background min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -69,8 +83,10 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Address</h3>
                   <p className="text-gray-400">
-                    Singhal Industries<br />
-                    Mohkampur Phase 1<br />
+                    Singhal Industries
+                    <br />
+                    Mohkampur Phase 1
+                    <br />
                     Meerut, India
                   </p>
                 </div>
@@ -119,17 +135,65 @@ export default function Contact() {
               </div>
             </div>
 
+            {/* Map + actions */}
             <div className="bg-secondary border border-gray-700 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d475.24374152547307!2d77.67199098514482!3d28.94967008743968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1762545662330!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="GRYP.FIT Location - Mohkampur Phase 1, Meerut"
-              ></iframe>
+              <div className="relative">
+                {/* iframe with q=lat,lng to show a pin */}
+                <iframe
+                  src={embedSrc}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="GRYP.FIT Location - Mohkampur Phase 1, Meerut"
+                />
+
+                {/* Decorative red pin centered over the iframe (visual only) */}
+                <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path d="M12 2.5C8.4 2.5 5.5 5.4 5.5 9c0 4.9 5.9 10.6 5.9 10.6s5.9-5.7 5.9-10.6c0-3.6-2.9-6.5-6.3-6.5z" fill="#E11D48"/>
+                    <circle cx="12" cy="9" r="2.2" fill="white"/>
+                  </svg>
+                </div>
+              </div>
+
+              {/* Action buttons */}
+              <div className="p-3 flex flex-col md:flex-row items-stretch gap-3">
+                <a
+                  href={googleMapsPlaceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-white px-4 py-2 rounded-md hover:opacity-95"
+                  aria-label={`Open ${PLACE_NAME} in Google Maps`}
+                >
+                  Open in Google Maps
+                </a>
+
+                <a
+                  href={appleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 bg-secondary border border-muted px-4 py-2 rounded-md hover:opacity-95"
+                  aria-label={`Open ${PLACE_NAME} in Apple Maps`}
+                >
+                  Open in Apple Maps
+                </a>
+
+                <a
+                  href={googleMapsDirections}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-background border border-muted px-4 py-2 rounded-md hover:opacity-95"
+                  aria-label={`Get directions to ${PLACE_NAME}`}
+                >
+                  Get directions
+                </a>
+
+                {/* Optional geo: deep link for native apps (Android) */}
+                <a href={geoUrl} className="hidden" aria-hidden />
+              </div>
             </div>
           </motion.div>
 
