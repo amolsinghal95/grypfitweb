@@ -40,13 +40,22 @@ export default function Home() {
             className="text-center"
           >
             <motion.h1
-              className="text-5xl md:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="text-primary">GRYP.FIT</span>
-            </motion.h1>
+  className="text-3xl md:text-5xl font-bold mb-4"
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  Gym & Sports Equipment Spare Parts Manufacturer in India
+</motion.h1>
+
+<motion.h2
+  className="text-5xl md:text-7xl font-bold mb-6 text-primary"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, delay: 0.3 }}
+>
+  GRYP.FIT
+</motion.h2>
 
             <motion.p
               className="text-xl md:text-3xl text-muted mb-4"

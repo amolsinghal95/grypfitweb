@@ -25,9 +25,9 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-2xl md:text-3xl font-bold text-primary">
+              <span className="text-2xl md:text-3xl font-bold text-primary">
                 GRYP.FIT
-              </h1>
+              </span>
               <p className="text-xs text-muted hidden md:block">
                 By Singhal Industries
               </p>
