@@ -21,7 +21,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:amolsinghal95@gmail.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:gryp.fit@gmail.com?subject=${encodeURIComponent(
       formData.subject
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
@@ -38,7 +38,7 @@ export default function Contact() {
     });
   };
 
-  // LOCATION constants — updated from your Maps link
+
 const LAT = 28.9497921;
 const LNG = 77.67162;
 const PLACE_NAME = "GRYP.FIT - Singhal Industries";
@@ -110,10 +110,10 @@ const geoUrl = `geo:${LAT},${LNG}?q=${LAT},${LNG}(${encodeURIComponent(PLACE_NAM
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email</h3>
                   <a
-                    href="mailto:amolsinghal95@gmail.com"
+                    href="mailto:gryp.fit@gmail.com"
                     className="text-gray-400 hover:text-primary transition-colors"
                   >
-                    amolsinghal95@gmail.com
+                    gryp.fit@gmail.com
                   </a>
                 </div>
               </div>
