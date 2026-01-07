@@ -9,9 +9,9 @@ import WhatsAppButton from "@/components/WhatsAppButton"; // global floating ins
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "GRYP.FIT - Precision Gym & Sports Equipment Parts",
+  title: "GRYP.FIT | Gym & Sports Equipment Spare Parts Manufacturer in India",
   description:
-    "Trusted manufacturer of spare parts for gym machines and sports equipment. Precision. Strength. Trust. — Crafting quality spare parts since 1995",
+    "GRYP.FIT is a trusted Indian manufacturer of gym and sports equipment spare parts. Precision-engineered components for fitness machines since 1995.",
   keywords: [
     "gym parts",
     "gym equipment",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "GRYP.FIT - Singhal Industries" }],
   openGraph: {
-    title: "GRYP.FIT - Precision Gym & Sports Equipment Parts",
-    description: "Trusted manufacturer of spare parts for gym machines and sports equipment since 1995",
-    url: "https://www.gryp.fit",
+    title: "GRYP.FIT | Gym & Sports Equipment Spare Parts Manufacturer in India",
+    description: "Trusted Indian manufacturer of gym and sports equipment spare parts since 1995.",
+    url: "https://gryp.fit",
     siteName: "GRYP.FIT",
     locale: "en_IN",
     type: "website",
