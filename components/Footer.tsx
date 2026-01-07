@@ -99,7 +99,7 @@ export default function Footer() {
         {/* --- Bottom Bar --- */}
         <div className="border-t border-muted mt-8 pt-8 text-center">
           <p className="text-muted text-sm">
-            © 2025 GRYP.FIT - Singhal Industries. All rights reserved.
+            © 2026 GRYP.FIT - Singhal Industries. All rights reserved.
           </p>
         </div>
       </div>
