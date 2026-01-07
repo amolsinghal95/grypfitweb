@@ -337,7 +337,8 @@ export default function ProductModal({ product, onClose }: Props) {
           onClick={onClose}
         >
           <motion.div
-            className="bg-secondary text-foreground rounded-lg max-w-5xl w-full max-h-[90vh] overflow-hidden shadow-lg border border-muted"
+            className="bg-secondary text-foreground rounded-lg max-w-5xl w-full h-[90vh] overflow-hidden shadow-lg border border-muted flex flex-col"
+
             initial={{ scale: 0.98, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.98, opacity: 0 }}
@@ -360,7 +361,7 @@ export default function ProductModal({ product, onClose }: Props) {
             {/* -------------- CHANGED HEADER END -------------- */}
 
             {/* Body */}
-            <div className="overflow-y-auto max-h-[calc(90vh-72px)] p-6">
+            <div className="flex-1 overflow-y-auto p-6">
               <div className="grid md:grid-cols-2 gap-6">
                 {/* >>> REPLACED IMAGE BLOCK START */}
                 <div className="relative w-full h-80 bg-white rounded-lg border border-muted flex items-center justify-center">

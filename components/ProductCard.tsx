@@ -87,16 +87,25 @@ export default function ProductCard({
       {/* CONTENT */}
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <h3 className="text-lg font-semibold truncate">{title}</h3>
-            {shortDescription ? <p className="text-xs text-muted truncate">{shortDescription}</p> : null}
-          </div>
+  {/* LEFT */}
+  <div className="min-w-0 flex-1">
+    <h3 className="text-lg font-semibold truncate">{title}</h3>
+    {shortDescription ? (
+      <p className="text-xs text-muted truncate">{shortDescription}</p>
+    ) : null}
 
-          <div className="flex flex-col items-end gap-2">
-            <div className="text-sm text-muted">SKU: {sku}</div>
-            <div className="text-xl font-bold text-primary">{price}</div>
-          </div>
-        </div>
+    {/* SKU — FIXED POSITION */}
+    <div className="text-sm text-muted mt-1 truncate">
+      SKU: {sku}
+    </div>
+  </div>
+
+  {/* RIGHT */}
+  <div className="flex-shrink-0 text-xl font-bold text-primary">
+    {price}
+  </div>
+</div>
+
 
         <div className="mt-3 flex items-center justify-between">
           <div className="flex items-center gap-2 text-xs">
