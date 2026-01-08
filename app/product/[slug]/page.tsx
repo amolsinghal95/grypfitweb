@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export const dynamic = "force-dynamic";
 
 import products from "@/data/products.json";
@@ -33,7 +35,6 @@ export async function generateMetadata({
     };
   }
 
-  // ✅ FIX: define imageUrl INSIDE this function
   const imageUrl = product.image.startsWith("http")
     ? product.image
     : `https://www.gryp.fit${product.image}`;
@@ -78,8 +79,42 @@ export default async function ProductPage({
     notFound();
   }
 
+  const imageUrl = product.image.startsWith("http")
+    ? product.image
+    : `https://www.gryp.fit${product.image}`;
+
   return (
     <main className="max-w-4xl mx-auto py-16">
+      {/* ================= PRODUCT SCHEMA ================= */}
+      <Script
+        id="product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: product.title,
+            description: product.shortDescription,
+            sku: product.sku,
+            category: product.category,
+            image: imageUrl,
+            brand: {
+              "@type": "Brand",
+              name: "GRYP.FIT",
+            },
+            manufacturer: {
+              "@type": "Organization",
+              name: "Singhal Industries",
+            },
+            offers: {
+              "@type": "Offer",
+              availability: "https://schema.org/InStock",
+              url: `https://www.gryp.fit/product/${product.sku.toLowerCase()}`,
+            },
+          }),
+        }}
+      />
+
       <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
       <p className="text-gray-600 mb-2">{product.shortDescription}</p>
 
