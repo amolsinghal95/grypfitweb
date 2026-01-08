@@ -28,54 +28,68 @@ export default function Home() {
 
   return (
     <div className="bg-background">
-      {/* Hero Section */}
+      {/* ================= HERO SECTION ================= */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
 
         <div className="container mx-auto px-4 py-20 relative z-10">
           <motion.div
+            className="text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
+            {/* H1 */}
             <motion.h1
-  className="text-3xl md:text-5xl font-bold mb-4"
-  initial={{ opacity: 0, scale: 0.95 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
->
-  Gym & Sports Equipment Spare Parts Manufacturer in India
-</motion.h1>
+              className="text-3xl md:text-5xl font-bold mb-4"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Gym & Sports Equipment Spare Parts
+            </motion.h1>
 
-<motion.h2
-  className="text-5xl md:text-7xl font-bold mb-6 text-primary"
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8, delay: 0.3 }}
->
-  GRYP.FIT
-</motion.h2>
+            {/* Brand */}
+            <motion.h2
+              className="text-5xl md:text-7xl font-bold mb-6 text-primary"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              GRYP.FIT
+            </motion.h2>
 
-            <motion.p
+            {/* Tagline */}
+            <motion.div
               className="text-xl md:text-3xl text-muted mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Precision. Strength. Trust.
-            </motion.p>
+              <p>Precision. Strength. Trust.</p>
+            </motion.div>
 
-            <motion.p
-              className="text-lg md:text-xl text-muted mb-12"
+            {/* Legacy line */}
+            <motion.div
+              className="text-lg md:text-xl text-muted mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Crafting quality spare parts for gym machines and sports equipment since
-              1995
-            </motion.p>
+              <p>
+                Manufacturer of precision gym & sports equipment spare parts in India
+                since 1995
+              </p>
+            </motion.div>
 
+            {/* SEO-only internal links */}
+            <div className="sr-only">
+              Explore our <Link href="/products">gym and sports equipment spare parts</Link>,{" "}
+              learn more <Link href="/about">about our manufacturing expertise</Link>, or{" "}
+              <Link href="/contact">get in touch with us</Link> for bulk orders.
+            </div>
+
+            {/* CTA buttons */}
             <motion.div
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
@@ -88,6 +102,7 @@ export default function Home() {
               >
                 View Products
               </Link>
+
               <Link
                 href="/contact"
                 className="bg-transparent border-2 border-primary hover:bg-primary/10 text-primary px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
@@ -99,24 +114,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Our Product Categories Section (Enhanced) ===== */}
+      {/* ================= PRODUCT CATEGORIES ================= */}
       <section className="py-20 bg-gradient-to-br from-[#f8fafc] via-[#eef3f7] to-[#e9eff5]">
         <div className="container mx-auto px-4">
           <motion.div
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 text-slate-800 drop-shadow-sm">
               Our Product <span className="text-primary">Categories</span>
             </h2>
+
             <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
               Premium quality components for fitness and sports equipment — built for
               precision, performance, and reliability.
             </p>
-            <div className="w-20 h-[3px] bg-primary mx-auto mt-6 rounded-full"></div>
+
+            <div className="w-20 h-[3px] bg-primary mx-auto mt-6 rounded-full" />
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -136,9 +153,11 @@ export default function Home() {
                     <div className="text-primary mb-4 flex justify-center">
                       {category.icon}
                     </div>
+
                     <h3 className="text-2xl font-semibold mb-3 text-slate-800">
                       {category.title}
                     </h3>
+
                     <p className="text-slate-600">{category.description}</p>
                   </motion.div>
                 </Link>
@@ -148,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Why Choose GRYP.FIT Section ===== */}
+      {/* ================= WHY CHOOSE US ================= */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -159,58 +178,39 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">Why Choose GRYP.FIT?</h2>
+
               <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 text-2xl">✓</span>
-                  <div>
-                    <h3 className="font-semibold text-lg">25+ Years of Experience</h3>
-                    <p className="text-muted">
-                      Trusted legacy in manufacturing excellence
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 text-2xl">✓</span>
-                  <div>
-                    <h3 className="font-semibold text-lg">Top Gym Brands Trust Us</h3>
-                    <p className="text-muted">
-                      Serving leading fitness equipment manufacturers across India
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 text-2xl">✓</span>
-                  <div>
-                    <h3 className="font-semibold text-lg">
-                      Custom & Bulk Manufacturing
-                    </h3>
-                    <p className="text-muted">
-                      Tailored solutions for your specific needs
-                    </p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 text-2xl">✓</span>
-                  <div>
-                    <h3 className="font-semibold text-lg">Fast Delivery & Support</h3>
-                    <p className="text-muted">Reliable service you can count on</p>
-                  </div>
-                </li>
+                {[
+                  ["25+ Years of Experience", "Trusted legacy in manufacturing excellence"],
+                  ["Top Gym Brands Trust Us", "Serving leading fitness equipment manufacturers across India"],
+                  ["Custom & Bulk Manufacturing", "Tailored solutions for your specific needs"],
+                  ["Fast Delivery & Support", "Reliable service you can count on"],
+                ].map(([title, desc]) => (
+                  <li key={title} className="flex items-start">
+                    <span className="text-primary mr-3 text-2xl">✓</span>
+                    <div>
+                      <h3 className="font-semibold text-lg">{title}</h3>
+                      <p className="text-muted">{desc}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
             <motion.div
+              className="bg-secondary border border-muted rounded-lg p-8"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-secondary border border-muted rounded-lg p-8"
             >
               <h3 className="text-2xl font-bold mb-6 text-primary">Get in Touch</h3>
+
               <p className="text-muted mb-6">
                 Ready to discuss your requirements? We're here to help with custom
                 solutions and bulk orders.
               </p>
+
               <div className="space-y-4">
                 <a
                   href="https://wa.me/918449291260"
@@ -220,6 +220,7 @@ export default function Home() {
                 >
                   Chat on WhatsApp
                 </a>
+
                 <Link
                   href="/contact"
                   className="block w-full bg-primary hover:bg-blue-600 text-white text-center py-3 rounded-lg transition-colors font-medium"

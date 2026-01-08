@@ -23,6 +23,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/pdfmake": "^0.2.12"
+    "@types/pdfmake": "^0.2.12",
+    "baseline-browser-mapping": "^2.9.12"
   }
 }

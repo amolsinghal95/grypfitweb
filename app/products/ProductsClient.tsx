@@ -324,3 +324,17 @@ export default function ProductsClient() {
     </>
   );
 }
+
+<div className="sr-only">
+  <p>
+    GRYP.FIT is a manufacturer of gym and sports equipment spare parts in India,
+    supplying precision components for commercial gyms, fitness centers, and
+    sports infrastructure since 1995.
+  </p>
+  <p>
+    Our product range includes gym machine parts, weight plates, fitness
+    accessories, and custom-manufactured sports equipment components for bulk
+    and OEM requirements.
+  </p>
+</div>
+
