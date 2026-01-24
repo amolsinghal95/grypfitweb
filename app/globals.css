@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- THEME COLORS (Light) ---------- */
+
 :root {
-  --background: #FFFFFF;        /* page background */
-  --foreground: #111111;        /* primary text */
-  --primary: #0b5cff;           /* brand accent */
-  --secondary: #f5f7fb;         /* light card/bg tone */
-  --muted-rgb: 34, 37, 41;      /* for rgba muted text */
+  --background: #FFFFFF;       
+  --foreground: #111111;        
+  --primary: #0b5cff;           
+  --secondary: #f5f7fb;         
+  --muted-rgb: 34, 37, 41;      
   --muted: rgba(var(--muted-rgb), 0.6);
   --border-muted: rgba(var(--muted-rgb), 0.12);
 }
 
-/* ---------- GLOBAL RESET ---------- */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -30,7 +30,6 @@ body {
   scroll-behavior: smooth;
 }
 
-/* links */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -38,7 +37,6 @@ a {
 }
 a:hover { color: color-mix(in srgb, var(--primary) 70%, black); }
 
-/* Small utility classes that map to CSS variables (keeps your TSX clean) */
 .bg-background { background-color: var(--background); }
 .text-foreground { color: var(--foreground); }
 .text-primary { color: var(--primary); }
@@ -47,14 +45,12 @@ a:hover { color: color-mix(in srgb, var(--primary) 70%, black); }
 .text-muted { color: var(--muted); }
 .border-muted { border-color: var(--border-muted); }
 
-/* Helpful border / card defaults */
 .card {
   background: var(--background);
   border: 1px solid var(--border-muted);
   border-radius: 0.75rem;
 }
 
-/* Tailwind custom utility example kept */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
