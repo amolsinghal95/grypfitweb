@@ -2,17 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-  --background: #FFFFFF;       
-  --foreground: #111111;        
-  --primary: #0b5cff;           
-  --secondary: #f5f7fb;         
-  --muted-rgb: 34, 37, 41;      
-  --muted: rgba(var(--muted-rgb), 0.6);
-  --border-muted: rgba(var(--muted-rgb), 0.12);
+  /* Premium Slate & Electric Blue Palette */
+  --background: #ffffff;
+  --foreground: #0f172a; /* Slate 900 */
+  --primary: #020617;    /* Deep Midnight */
+  --accent: #3b82f6;     /* Modern Electric Blue for actions */
+  --secondary: #f8fafc;  /* Soft Slate for subtle backgrounds */
+  --muted: #64748b;      /* Slate 500 for secondary text */
+  --border-subtle: #e2e8f0;
+  
+  /* Glassmorphism effects */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.06);
 }
-
 
 * {
   box-sizing: border-box;
@@ -26,33 +29,108 @@ body {
   overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Typography Refinements */
+h1, h2, h3, h4 {
+  letter-spacing: -0.04em; /* Tighter tracking for a high-end editorial feel */
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--muted);
+  font-weight: 400;
 }
 
 a {
-  color: var(--primary);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.15s ease;
-}
-a:hover { color: color-mix(in srgb, var(--primary) 70%, black); }
-
-.bg-background { background-color: var(--background); }
-.text-foreground { color: var(--foreground); }
-.text-primary { color: var(--primary); }
-.bg-primary { background-color: var(--primary); }
-.bg-secondary { background-color: var(--secondary); }
-.text-muted { color: var(--muted); }
-.border-muted { border-color: var(--border-muted); }
-
-.card {
-  background: var(--background);
-  border: 1px solid var(--border-muted);
-  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Custom UI Utility Classes */
+@layer components {
+  .premium-card {
+    @apply bg-white border border-slate-100 rounded-[2rem] transition-all duration-500 ease-out;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
   }
+
+  .premium-card:hover {
+    @apply -translate-y-3;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+  }
+
+  .glass-header {
+    @apply sticky top-0 z-50 transition-all duration-300;
+    backdrop-filter: blur(20px) saturate(180%);
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .btn-premium {
+    @apply px-10 py-4 rounded-full font-bold transition-all duration-500 flex items-center justify-center gap-3 active:scale-95;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-slate-800 hover:shadow-2xl hover:shadow-blue-500/20;
+  }
+
+  .btn-outline {
+    @apply border-2 border-slate-200 text-primary hover:border-primary hover:bg-slate-50;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #020617 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Motion Utilities */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+.about-page-header-white header {
+  background-color: white !important;
+  color: #020617;
+}
+
+.about-page-header-white header a {
+  color: #020617;
 }

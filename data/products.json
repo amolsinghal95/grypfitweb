@@ -8,8 +8,13 @@
     "longDescription": "This plastic see-saw seat features a contoured ergonomic design to ensure comfortable seating for children. It is suitable for playground installations and replacement use, providing stability and support during regular outdoor play.",
     "category": "Sports",
     "image": "/products/id1.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.4, "unit": "kg" },
-    "dimensions": { "length": 33, "width": 20, "height": 27, "unit": "cm" }
+    "dimensions": { "length": 33, "width": 20, "height": 27, "unit": "cm" },
+    "colors": [
+      { "name": "Black", "hex": "#000000" },
+      { "name": "Red", "hex": "#C1121F" }
+    ]
   },
   {
     "id": 2,
@@ -20,8 +25,13 @@
     "longDescription": "These heavy-duty swing chains are coated with protective rubber to improve safety and comfort. They are rust-resistant and weatherproof, making them suitable for playgrounds, gardens, and tree-mounted swings.",
     "category": "Sports",
     "image": "/products/id2.jpeg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 3, "unit": "kg" },
-    "dimensions": { "length": 50, "width": 0.1, "height": 50, "unit": "cm" }
+    "dimensions": { "length": 50, "width": 0.1, "height": 50, "unit": "cm" },
+    "colors": [
+      { "name": "Dark Blue", "hex": "#1D3557" },
+      { "name": "Forest Green", "hex": "#2D6A4F" }
+    ]
   },
   {
     "id": 3,
@@ -32,8 +42,14 @@
     "longDescription": "This flange cover helps protect industrial flanges from dust, debris, and environmental exposure. Its durable construction and secure-fit design allow easy installation while maintaining reliable protection.",
     "category": "Gym",
     "image": "/products/id3.jpeg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.6, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 5, "unit": "cm" }
+    "dimensions": { "length": 12, "width": 12, "height": 5, "unit": "cm" },
+    "colors": [
+      { "name": "Grey", "hex": "#6C757D" },
+      { "name": "Orange", "hex": "#F77F00" },
+      { "name": "White", "hex": "#FFFFFF" }
+    ]
   },
   {
     "id": 4,
@@ -44,8 +60,13 @@
     "longDescription": "This outdoor swing seat is made from heavy-duty plastic and paired with coated metal chains. It is designed for long-term use in parks, gardens, and playground environments.",
     "category": "Sports",
     "image": "/products/id4.jpeg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 3.5, "unit": "kg" },
-    "dimensions": { "length": 30, "width": 5.5, "height": 0.5, "unit": "cm" }
+    "dimensions": { "length": 30, "width": 5.5, "height": 0.5, "unit": "cm" },
+    "colors": [
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Sky Blue", "hex": "#4CC9F0" }
+    ]
   },
   {
     "id": 5,
@@ -56,8 +77,13 @@
     "longDescription": "This circular balance plate features an anti-slip surface to support controlled movement. It is suitable for gym workouts, yoga sessions, and physiotherapy-based balance exercises.",
     "category": "Gym",
     "image": "/products/id5.jpeg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 1.6, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 0.5, "unit": "cm" }
+    "dimensions": { "length": 12, "width": 12, "height": 0.5, "unit": "cm" },
+    "colors": [
+      { "name": "Purple", "hex": "#7209B7" },
+      { "name": "Mint Green", "hex": "#80ED99" }
+    ]
   },
   {
     "id": 6,
@@ -68,8 +94,14 @@
     "longDescription": "These ergonomic handlebar grips are made from high-quality rubber for long-lasting use. The textured surface improves grip while reducing hand fatigue during extended cycling sessions.",
     "category": "Gym",
     "image": "/products/id6.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" }
+    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" },
+    "colors": [
+      { "name": "Teal", "hex": "#2EC4B6" },
+      { "name": "Charcoal", "hex": "#343A40" },
+      { "name": "Crimson", "hex": "#9D0208" }
+    ]
   },
   {
     "id": 7,
@@ -80,8 +112,13 @@
     "longDescription": "These pedals are designed with standard threading for universal bicycle compatibility. The textured surface provides reliable traction in various riding conditions.",
     "category": "Gym",
     "image": "/products/id7.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.8, "unit": "kg" },
-    "dimensions": { "length": 6, "width": 4, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 6, "width": 4, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Olive Green", "hex": "#6A994E" },
+      { "name": "Steel Blue", "hex": "#468FAF" }
+    ]
   },
   {
     "id": 8,
@@ -92,8 +129,13 @@
     "longDescription": "This arm wheel handle provides smooth and stable control in machinery operations. Its durable construction ensures reliable torque handling in industrial environments.",
     "category": "Gym",
     "image": "/products/id8.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 2, "width": 2, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 2, "width": 2, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Silver", "hex": "#CED4DA" },
+      { "name": "Maroon", "hex": "#800F2F" }
+    ]
   },
   {
     "id": 9,
@@ -104,8 +146,13 @@
     "longDescription": "This chest press seat is built for outdoor gym installations and regular use. It provides stable support and comfort while withstanding weather exposure.",
     "category": "Gym",
     "image": "/products/id9.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.2, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 11, "height": 0.1, "unit": "cm" }
+    "dimensions": { "length": 12, "width": 11, "height": 0.1, "unit": "cm" },
+    "colors": [
+      { "name": "Navy Blue", "hex": "#03045E" },
+      { "name": "Sand", "hex": "#E9C46A" }
+    ]
   },
   {
     "id": 10,
@@ -116,10 +163,14 @@
     "longDescription": "This plastic leg press paddle features a perforated surface for improved grip. It is lightweight and suitable for use in outdoor gym and stepper machines.",
     "category": "Gym",
     "image": "/products/id10.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 13, "width": 4, "height": 1, "unit": "cm" }
+    "dimensions": { "length": 13, "width": 4, "height": 1, "unit": "cm" },
+    "colors": [
+      { "name": "Lime Green", "hex": "#AACC00" },
+      { "name": "Graphite", "hex": "#495057" }
+    ]
   },
-
   {
     "id": 11,
     "title": "Rubber Garden Swing Seat",
@@ -129,8 +180,13 @@
     "longDescription": "This rubber swing seat is paired with coated chains to improve safety and durability. It is suitable for gardens, patios, and outdoor recreational spaces.",
     "category": "Gym",
     "image": "/products/id11(1).jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 3.9, "unit": "kg" },
-    "dimensions": { "length": 35, "width": 5.5, "height": 0.1, "unit": "cm" }
+    "dimensions": { "length": 35, "width": 5.5, "height": 0.1, "unit": "cm" },
+    "colors": [
+      { "name": "Brown", "hex": "#6F4E37" },
+      { "name": "Mustard", "hex": "#E09F3E" }
+    ]
   },
   {
     "id": 12,
@@ -141,20 +197,14 @@
     "longDescription": "This climbing hold set is made from durable polyurethane for secure grip. It includes mounting hardware for safe installation in gyms, schools, or play areas.",
     "category": "Sports",
     "image": "/products/id12(1).jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 1.5, "unit": "kg" },
-    "dimensions": { "length": 4, "width": 2, "height": 0.2, "unit": "cm" }
-  },
-  {
-    "id": 13,
-    "title": "Ergonomic Plastic Bicycle Handlebar Grips, Textured Pattern Surface",
-    "sku": "OTD-0019",
-    "price": "₹NA",
-    "shortDescription": "Plastic bicycle grips designed for comfort and reliable handling.",
-    "longDescription": "These ergonomic handlebar grips feature a textured surface to improve grip control. They are designed to reduce hand fatigue during extended cycling use.",
-    "category": "Gym",
-    "image": "/products/sampleproduct.jpg",
-    "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" }
+    "dimensions": { "length": 4, "width": 2, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Pink", "hex": "#FF70A6" },
+      { "name": "Aqua", "hex": "#00F5D4" },
+      { "name": "Purple", "hex": "#8338EC" }
+    ]
   },
   {
     "id": 14,
@@ -165,8 +215,13 @@
     "longDescription": "These bicycle handlebar grips are manufactured from quality plastic material. The textured surface enhances grip stability while supporting comfortable riding.",
     "category": "Gym",
     "image": "/products/id14.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" }
+    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" },
+    "colors": [
+      { "name": "Indigo", "hex": "#3A0CA3" },
+      { "name": "Peach", "hex": "#FFB703" }
+    ]
   },
   {
     "id": 15,
@@ -177,8 +232,13 @@
     "longDescription": "This outdoor top cap is designed for use in construction and industrial environments. Its bright color improves visibility while supporting general safety compliance.",
     "category": "Gym",
     "image": "/products/id15.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 4, "width": 4, "height": 4, "unit": "cm" }
+    "dimensions": { "length": 4, "width": 4, "height": 4, "unit": "cm" },
+    "colors": [
+      { "name": "Safety Orange", "hex": "#F48C06" },
+      { "name": "Neon Green", "hex": "#38B000" }
+    ]
   },
   {
     "id": 16,
@@ -189,8 +249,13 @@
     "longDescription": "This exercise mat features a textured surface with raised dots for improved traction. It helps prevent movement during yoga, pilates, and general fitness training.",
     "category": "Gym",
     "image": "/products/id16.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 1.5, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 10, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 12, "width": 10, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Ash Grey", "hex": "#ADB5BD" },
+      { "name": "Ocean Blue", "hex": "#0077B6" }
+    ]
   },
   {
     "id": 17,
@@ -201,8 +266,13 @@
     "longDescription": "These plastic seats are designed for use in merry-go-round play equipment. They offer durability and visibility for safe use in playground environments.",
     "category": "Sports",
     "image": "/products/id17.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 1.2, "unit": "kg" },
-    "dimensions": { "length": 14, "width": 12, "height": 3, "unit": "cm" }
+    "dimensions": { "length": 14, "width": 12, "height": 3, "unit": "cm" },
+    "colors": [
+      { "name": "Red Orange", "hex": "#E85D04" },
+      { "name": "Turquoise", "hex": "#06D6A0" }
+    ]
   },
   {
     "id": 18,
@@ -213,8 +283,13 @@
     "longDescription": "This plastic seat is manufactured using blow moulding technology for durability. It features a textured surface and mounting points for secure installation.",
     "category": "Gym",
     "image": "/products/id18.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.9, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 12, "width": 12, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Cyan", "hex": "#00B4D8" },
+      { "name": "Warm Grey", "hex": "#8D99AE" }
+    ]
   },
   {
     "id": 19,
@@ -225,8 +300,13 @@
     "longDescription": "This ball thrower features a curved handle to enhance throwing range with minimal effort. The textured grip ensures comfortable handling during extended play sessions.",
     "category": "Sports",
     "image": "/products/id19.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 20, "width": 2, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 20, "width": 2, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Electric Blue", "hex": "#3A86FF" },
+      { "name": "Bright Yellow", "hex": "#FFBE0B" }
+    ]
   },
   {
     "id": 20,
@@ -237,44 +317,63 @@
     "longDescription": "This side-arm cricket ball thrower simulates realistic bowling actions. It supports consistent deliveries to improve batting timing and reaction speed.",
     "category": "Sports",
     "image": "/products/id20.jpg",
+    "material": "Rubber Coated Steel",
     "weight": { "value": 0.3, "unit": "kg" },
-    "dimensions": { "length": 18, "width": 0.2, "height": 0.2, "unit": "cm" }
+    "dimensions": { "length": 18, "width": 0.2, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Jet Black", "hex": "#212529" },
+      { "name": "Royal Blue", "hex": "#1D4ED8" }
+    ]
   },
   {
-  "id": 21,
-  "title": "Gym Cable Ball Stopper Replacement, Lifting Cable Joint Part",
-  "sku": "IND-002",
-  "price": "₹NA",
-  "shortDescription": "Durable nylon ball stopper designed for secure cable positioning in gym machines.",
-  "longDescription": "This gym cable ball stopper features a 40 mm diameter with a 10 mm center hole for secure cable fit. Made from high-quality hard nylon, it provides impact resistance and long-term durability for regular gym use.",
-  "category": "Gym",
-  "image": "/products/id21.jpg",
-  "weight": { "value": 0.05, "unit": "kg" },
-  "dimensions": { "length": 2, "width": 2, "height": 2, "unit": "cm" }
-},
-{
-  "id": 22,
-  "title": "Industrial Round Handle Bolt with Yellow Grip",
-  "sku": "IND-001",
-  "price": "₹NA",
-  "shortDescription": "Round-handle bolt with plastic grip for secure fastening in gym and industrial equipment.",
-  "longDescription": "This round-handle bolt features a yellow plastic grip for easy handling and a metal threaded shaft for reliable fastening. Suitable for gym machines and industrial mounting applications.",
-  "category": "Gym",
-  "image": "/products/id22.jpg",
-  "weight": { "value": 0.1, "unit": "kg" },
-  "dimensions": { "length": 3, "width": 0.1, "height": 0.2, "unit": "cm" }
-},
-{
-  "id": 23,
-  "title": "T Shape Capture Lock Spring, 3 Inch",
-  "sku": "IND-006",
-  "price": "₹NA",
-  "shortDescription": "3-inch T-shape capture lock spring for secure gym machine assembly.",
-  "longDescription": "This 3-inch T shape capture lock spring is designed to provide secure locking in gym machines. Built with durable material, it ensures stability during regular equipment use.",
-  "category": "Gym",
-  "image": "/products/id23.jpg",
-  "weight": { "value": 0.1, "unit": "kg" },
-  "dimensions": { "length": 3, "width": 0.2, "height": 0.2, "unit": "cm" }
-}
-
+    "id": 21,
+    "title": "Gym Cable Ball Stopper Replacement, Lifting Cable Joint Part",
+    "sku": "IND-002",
+    "price": "₹NA",
+    "shortDescription": "Durable nylon ball stopper designed for secure cable positioning in gym machines.",
+    "longDescription": "This gym cable ball stopper features a 40 mm diameter with a 10 mm center hole for secure cable fit. Made from high-quality hard nylon, it provides impact resistance and long-term durability for regular gym use.",
+    "category": "Gym",
+    "image": "/products/id21.jpg",
+    "material": "Rubber Coated Steel",
+    "weight": { "value": 0.05, "unit": "kg" },
+    "dimensions": { "length": 2, "width": 2, "height": 2, "unit": "cm" },
+    "colors": [
+      { "name": "Ivory", "hex": "#F8F9FA" },
+      { "name": "Dark Grey", "hex": "#495057" }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Industrial Round Handle Bolt with Yellow Grip",
+    "sku": "IND-001",
+    "price": "₹NA",
+    "shortDescription": "Round-handle bolt with plastic grip for secure fastening in gym and industrial equipment.",
+    "longDescription": "This round-handle bolt features a yellow plastic grip for easy handling and a metal threaded shaft for reliable fastening. Suitable for gym machines and industrial mounting applications.",
+    "category": "Gym",
+    "image": "/products/id22.jpg",
+    "material": "Rubber Coated Steel",
+    "weight": { "value": 0.1, "unit": "kg" },
+    "dimensions": { "length": 3, "width": 0.1, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Graphite Grey", "hex": "#6C757D" }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "T Shape Capture Lock Spring, 3 Inch",
+    "sku": "IND-006",
+    "price": "₹NA",
+    "shortDescription": "3-inch T-shape capture lock spring for secure gym machine assembly.",
+    "longDescription": "This 3-inch T shape capture lock spring is designed to provide secure locking in gym machines. Built with durable material, it ensures stability during regular equipment use.",
+    "category": "Gym",
+    "image": "/products/id23.jpg",
+    "material": "Rubber Coated Steel",
+    "weight": { "value": 0.1, "unit": "kg" },
+    "dimensions": { "length": 3, "width": 0.2, "height": 0.2, "unit": "cm" },
+    "colors": [
+      { "name": "Metallic Grey", "hex": "#ADB5BD" },
+      { "name": "Deep Blue", "hex": "#023E8A" }
+    ]
+  }
 ]

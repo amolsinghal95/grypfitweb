@@ -1,106 +1,164 @@
-import Link from "next/link";
-import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+
+/**
+ * NEXT.JS NOTE:
+ * In your local project, swap the mocks below for:
+ * import Link from "next/link";
+ */
+
+// --- Preview Mocks ---
+const Link = ({ href, children, className, ...props }: any) => (
+  <a href={href} className={className} {...props}>
+    {children}
+  </a>
+);
+
+const Icons = {
+  ArrowRight: () => (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  ),
+  Globe: () => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a14.5 14.5 0 0 0 0 20" />
+      <path d="M2 12h20" />
+    </svg>
+  )
+};
 
 export default function Footer() {
-  // Default prefilled WhatsApp message
-  const whatsappMessage = encodeURIComponent(
-    "Hello! I’m interested in your products at GRYP.FIT. Please share more details about pricing, availability, and lead time. — Sent from the GRYP.FIT website"
-  );
-
-  // Default email subject and body
-  const emailSubject = encodeURIComponent("Product Enquiry - GRYP.FIT");
-  const emailBody = encodeURIComponent(
-    `Hello,\n\nI’m reaching out to learn more about your products at GRYP.FIT.\n\nPlease share details about:\n- Product catalog or categories\n- Pricing and bulk order options\n- Delivery and lead time\n\nThank you,\n[Your Name]\n\n— Sent from the GRYP.FIT website`
-  );
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary border-t border-muted">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* --- Brand Info --- */}
+    <footer className="bg-slate-950 text-white pt-20 pb-10 relative overflow-hidden">
+      {/* Subtle Brand Watermark */}
+      <div className="absolute inset-0 flex items-center justify-center
+        text-[18vw] font-black text-white/[0.05]
+        leading-none select-none pointer-events-none">
+        GRYP.FIT
+      </div>
+
+
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 mb-16">
+
+          {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">gryp.fit</h3>
-            <p className="text-muted text-sm">Precision. Strength. Trust.</p>
-            <p className="text-muted text-sm mt-2">
-              Crafting quality spare parts for gym machines and sport equipment since 1995
+            <Link href="/" className="group flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-slate-950 transition-transform duration-300 group-hover:rotate-6">
+                <span className="font-black text-xl italic">G</span>
+              </div>
+              <span className="text-2xl font-black tracking-tight">
+                GRYP<span className="text-accent">.</span>FIT
+              </span>
+            </Link>
+
+            <p className="text-white/55 font-medium leading-relaxed mb-6 max-w-xs">
+              Precision-engineered components for global fitness brands since 1995.
             </p>
+
+            <div className="flex items-center gap-3 text-white/40">
+              <Icons.Globe />
+              <span className="text-[11px] font-semibold uppercase tracking-widest">
+                Meerut, India
+              </span>
+            </div>
           </div>
 
-          {/* --- Quick Links --- */}
+          {/* Products */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-foreground">
-              Quick Links
+            <h4 className="text-xs font-black uppercase tracking-[0.35em] text-white/30 mb-6">
+              Products
             </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/"
-                  className="text-muted hover:text-primary transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-muted hover:text-primary transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="text-muted hover:text-primary transition-colors"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-muted hover:text-primary transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+            <ul className="space-y-3">
+              {[
+                { n: "Gym Spare Parts", h: "/products?category=Gym" },
+                { n: "Sports Equipment", h: "/products?category=Sports" },
+                { n: "Calibrated Plates", h: "/products?category=Plates%20&%20Weights" },
+                { n: "Custom OEM Solutions", h: "/contact" },
+              ].map(link => (
+                <li key={link.n}>
+                  <Link
+                    href={link.h}
+                    className="text-white/60 hover:text-white font-semibold flex items-center gap-2 group"
+                  >
+                    <span className="opacity-0 group-hover:opacity-100 transition text-accent">
+                      <Icons.ArrowRight />
+                    </span>
+                    {link.n}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* --- Connect With Us --- */}
+          {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-foreground">
-              Connect With Us
+            <h4 className="text-xs font-black uppercase tracking-[0.35em] text-white/30 mb-6">
+              Company
             </h4>
-            <div className="flex space-x-4">
-              {/* WhatsApp with custom message */}
-              <a
-                href={`https://wa.me/918449291260?text=${whatsappMessage}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted hover:text-primary transition-colors text-2xl"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp />
-              </a>
+            <ul className="space-y-3">
+              {[
+                { n: "Our Legacy", h: "/about" },
+                { n: "Contact", h: "/contact" },
+                { n: "Technical Support", h: "/contact" },
+                { n: "Wholesale Inquiry", h: "/contact" },
+                
+              ].map(link => (
+                <li key={link.n}>
+                  <Link
+                    href={link.h}
+                    className="text-white/60 hover:text-white font-semibold flex items-center gap-2 group"
+                  >
+                    <span className="opacity-0 group-hover:opacity-100 transition text-accent">
+                      <Icons.ArrowRight />
+                    </span>
+                    {link.n}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              {/* Email with custom subject & body */}
-              <a
-                href={`mailto:amolsinghal95@gmail.com?subject=${emailSubject}&body=${emailBody}`}
-                className="text-muted hover:text-primary transition-colors text-2xl"
-                aria-label="Email"
-              >
-                <FaEnvelope />
-              </a>
-            </div>
+          {/* CTA */}
+          <div className="bg-white/3 rounded-3xl p-8 border border-white/10">
+            <h4 className="text-xs font-black uppercase tracking-[0.35em] text-white/30 mb-4">
+              Start a Project
+            </h4>
+            <p className="text-white/60 text-sm font-medium mb-6">
+              Discuss manufacturing requirements for your brand.
+            </p>
+
+            <Link
+              href="/contact"
+              className="w-full border border-white/30 text-white btn-premium py-4 font-black justify-center hover:bg-white/10 mb-3"
+            >
+              Get a Quote
+            </Link>
+
+            <Link
+              href="tel:+918449291260"
+              className="w-full text-white/70 btn-premium py-4 font-bold justify-center hover:text-white"
+            >
+              Call Support
+            </Link>
           </div>
         </div>
 
-        {/* --- Bottom Bar --- */}
-        <div className="border-t border-muted mt-8 pt-8 text-center">
-          <p className="text-muted text-sm">
-            © 2026 GRYP.FIT - Singhal Industries. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-white/40 text-[11px] font-semibold tracking-widest">
+            © {currentYear} GRYP.FIT — SINGHAL INDUSTRIES
           </p>
+
+          
         </div>
       </div>
     </footer>
