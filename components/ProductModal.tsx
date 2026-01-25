@@ -32,7 +32,7 @@ interface Product {
   id: number;
   title: string;
   sku: string;
-  price: string;
+  price?: string;
   shortDescription?: string;
   longDescription?: string;
   category?: string;
