@@ -359,14 +359,6 @@ export default function ProductModal({ product, onClose }: Props) {
         ]);
       }
 
-      specBody.push([{ text: "Product ID" }, { text: String(p.id ?? "") }]);
-
-      specBody.push([
-        { text: "Generated On" },
-        { text: new Date().toLocaleString() },
-      ]);
-
-      specBody.push([{ text: "Product ID" }, { text: String(p.id ?? "") }]);
       specBody.push([
         { text: "Generated On" },
         { text: new Date().toLocaleString() },

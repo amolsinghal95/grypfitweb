@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "title": "Children's See Saw Seat, Plastic Swing",
+    "title": "Children's Seesaw Seat",
     "sku": "OTD-001",
     "price": "₹350",
     "shortDescription": "Ergonomically designed plastic see-saw seat offering comfort and proper support during play.",
     "longDescription": "This plastic see-saw seat features a contoured ergonomic design to ensure comfortable seating for children. It is suitable for playground installations and replacement use, providing stability and support during regular outdoor play.",
-    "category": "Sports",
+    "category": "Gym",
     "image": "/products/id1.jpg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 0.4, "unit": "kg" },
+    "material": "HDPE",
+    "weight": { "value": 0.9, "unit": "kg" },
     "dimensions": { "length": 33, "width": 20, "height": 27, "unit": "cm" },
     "colors": [
-      { "name": "Black", "hex": "#000000" },
+      { "name": "Yellow", "hex": "#FFD60A" },
       { "name": "Red", "hex": "#C1121F" }
     ]
   },
@@ -23,49 +23,47 @@
     "price": "₹899",
     "shortDescription": "Rubber-coated metal chains designed for safe and durable swing installations.",
     "longDescription": "These heavy-duty swing chains are coated with protective rubber to improve safety and comfort. They are rust-resistant and weatherproof, making them suitable for playgrounds, gardens, and tree-mounted swings.",
-    "category": "Sports",
+    "category": "Gym",
     "image": "/products/id2.jpeg",
     "material": "Rubber Coated Steel",
     "weight": { "value": 3, "unit": "kg" },
-    "dimensions": { "length": 50, "width": 0.1, "height": 50, "unit": "cm" },
+    "dimensions": { "length": 150, "width": 2.54, "height": 0.8, "unit": "cm" },
     "colors": [
-      { "name": "Dark Blue", "hex": "#1D3557" },
-      { "name": "Forest Green", "hex": "#2D6A4F" }
+      { "name": "Orange","hex": "#FF9500" }
     ]
   },
   {
     "id": 3,
-    "title": "Professional Flange Cover Set",
+    "title": "Flange Cover Set",
     "sku": "OTD-0012",
     "price": "₹150",
     "shortDescription": "Protective flange cover designed to prevent contamination and accidental contact.",
     "longDescription": "This flange cover helps protect industrial flanges from dust, debris, and environmental exposure. Its durable construction and secure-fit design allow easy installation while maintaining reliable protection.",
     "category": "Gym",
     "image": "/products/id3.jpeg",
-    "material": "Rubber Coated Steel",
+    "material": "PPCP",
     "weight": { "value": 0.6, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 5, "unit": "cm" },
+    "dimensions": { "length": 11.4, "width": 0.6, "height": 30, "unit": "cm" },
     "colors": [
-      { "name": "Grey", "hex": "#6C757D" },
-      { "name": "Orange", "hex": "#F77F00" },
-      { "name": "White", "hex": "#FFFFFF" }
+      { "name": "Black", "hex": "#000000" },
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" }
     ]
   },
   {
     "id": 4,
     "title": "Outdoor Plastic Swing Seat with Chain Set",
     "sku": "OTD-007",
-    "price": "₹1500",
+    "price": "₹1499",
     "shortDescription": "Durable outdoor swing seat with plastic base and coated metal chains.",
     "longDescription": "This outdoor swing seat is made from heavy-duty plastic and paired with coated metal chains. It is designed for long-term use in parks, gardens, and playground environments.",
-    "category": "Sports",
+    "category": "Gym",
     "image": "/products/id4.jpeg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 3.5, "unit": "kg" },
+    "material": "Non-Breakable Industrial",
+    "weight": { "value": 3.85, "unit": "kg" },
     "dimensions": { "length": 30, "width": 5.5, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Yellow", "hex": "#FFD60A" },
-      { "name": "Sky Blue", "hex": "#4CC9F0" }
+      { "name": "Yellow", "hex": "#FFD60A" }
     ]
   },
   {
@@ -77,303 +75,312 @@
     "longDescription": "This circular balance plate features an anti-slip surface to support controlled movement. It is suitable for gym workouts, yoga sessions, and physiotherapy-based balance exercises.",
     "category": "Gym",
     "image": "/products/id5.jpeg",
-    "material": "Rubber Coated Steel",
+    "material": "Mild Steel",
     "weight": { "value": 1.6, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 0.5, "unit": "cm" },
+    "dimensions": { "length": 30, "width": 10, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Purple", "hex": "#7209B7" },
-      { "name": "Mint Green", "hex": "#80ED99" }
+      {"name": "Steel Gray","hex": "#71797E"}
     ]
   },
   {
     "id": 6,
-    "title": "Ergonomic Rubber Bicycle Handlebar Grips, Textured Pattern Surface",
+    "title": "Ergonomic Rubber Handlebar Grips, Textured Pattern Surface",
     "sku": "OTD-0020",
-    "price": "₹NA",
-    "shortDescription": "Textured rubber bicycle grips designed for comfort and controlled handling.",
-    "longDescription": "These ergonomic handlebar grips are made from high-quality rubber for long-lasting use. The textured surface improves grip while reducing hand fatigue during extended cycling sessions.",
+    "price": "₹50",
+    "shortDescription": "Textured rubber grips designed for comfort and controlled handling.",
+    "longDescription": "These ergonomic handlebar grips are made from high-quality rubber for long-lasting use. The textured surface improves grip while reducing hand fatigue during extended exercising sessions.",
     "category": "Gym",
     "image": "/products/id6.jpg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" },
+    "material": "Synthetic Rubber",
+    "weight": { "value": 0.2, "unit": "kg" },
+    "dimensions": { "length": 15, "width": 3.2, "height": 0.3, "unit": "cm" },
     "colors": [
-      { "name": "Teal", "hex": "#2EC4B6" },
-      { "name": "Charcoal", "hex": "#343A40" },
-      { "name": "Crimson", "hex": "#9D0208" }
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 7,
-    "title": "Bicycle Pedals, Black Plastic",
+    "title": "Exercise Bike Pedals",
     "sku": "OTD-0010",
-    "price": "₹NA",
+    "price": "₹299",
     "shortDescription": "Lightweight plastic bicycle pedals with textured grip surface.",
     "longDescription": "These pedals are designed with standard threading for universal bicycle compatibility. The textured surface provides reliable traction in various riding conditions.",
     "category": "Gym",
     "image": "/products/id7.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "ABS",
     "weight": { "value": 0.8, "unit": "kg" },
-    "dimensions": { "length": 6, "width": 4, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 6.2, "width": 10, "height": 1.6, "unit": "cm" },
     "colors": [
-      { "name": "Olive Green", "hex": "#6A994E" },
-      { "name": "Steel Blue", "hex": "#468FAF" }
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 8,
     "title": "Heavy-Duty Arm Wheel Handle",
     "sku": "OTD-004",
-    "price": "₹NA",
+    "price": "₹30",
     "shortDescription": "Industrial arm wheel handle designed for precise manual control.",
     "longDescription": "This arm wheel handle provides smooth and stable control in machinery operations. Its durable construction ensures reliable torque handling in industrial environments.",
     "category": "Gym",
     "image": "/products/id8.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable Industrial",
     "weight": { "value": 0.1, "unit": "kg" },
     "dimensions": { "length": 2, "width": 2, "height": 0.2, "unit": "cm" },
     "colors": [
-      { "name": "Silver", "hex": "#CED4DA" },
-      { "name": "Maroon", "hex": "#800F2F" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 9,
     "title": "Outdoor Chest Press Seat",
     "sku": "OTD-005",
-    "price": "₹NA",
+    "price": "₹249",
     "shortDescription": "Ergonomic chest press seat designed for outdoor gym equipment.",
     "longDescription": "This chest press seat is built for outdoor gym installations and regular use. It provides stable support and comfort while withstanding weather exposure.",
     "category": "Gym",
     "image": "/products/id9.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable Industrial",
     "weight": { "value": 0.2, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 11, "height": 0.1, "unit": "cm" },
+    "dimensions": { "length": 37.5, "width": 30, "height": 0.7, "unit": "cm" },
     "colors": [
-      { "name": "Navy Blue", "hex": "#03045E" },
-      { "name": "Sand", "hex": "#E9C46A" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 10,
     "title": "Outdoor Leg Press Paddle",
     "sku": "OTD-006",
-    "price": "₹NA",
+    "price": "₹99",
     "shortDescription": "Anti-slip paddle designed for outdoor leg press equipment.",
     "longDescription": "This plastic leg press paddle features a perforated surface for improved grip. It is lightweight and suitable for use in outdoor gym and stepper machines.",
     "category": "Gym",
     "image": "/products/id10.jpg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 13, "width": 4, "height": 1, "unit": "cm" },
+    "material": "PPCP",
+    "weight": { "value": 0.6, "unit": "kg" },
+    "dimensions": { "length": 32.5, "width": 15, "height": 1.5, "unit": "cm" },
     "colors": [
-      { "name": "Lime Green", "hex": "#AACC00" },
-      { "name": "Graphite", "hex": "#495057" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 11,
     "title": "Rubber Garden Swing Seat",
     "sku": "OTD-008",
-    "price": "₹NA",
+    "price": "₹699",
     "shortDescription": "Weather-resistant rubber swing seat designed for garden use.",
     "longDescription": "This rubber swing seat is paired with coated chains to improve safety and durability. It is suitable for gardens, patios, and outdoor recreational spaces.",
     "category": "Gym",
     "image": "/products/id11(1).jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Rubber In Nylon Canvas",
     "weight": { "value": 3.9, "unit": "kg" },
-    "dimensions": { "length": 35, "width": 5.5, "height": 0.1, "unit": "cm" },
+    "dimensions": { "length": 90, "width": 14, "height": 1, "unit": "cm" },
     "colors": [
-      { "name": "Brown", "hex": "#6F4E37" },
-      { "name": "Mustard", "hex": "#E09F3E" }
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 12,
     "title": "Climbing Holds Set (12 pcs)",
     "sku": "OTD-009",
-    "price": "₹NA",
+    "price": "₹1149",
     "shortDescription": "Set of twelve colorful climbing holds with mounting hardware.",
     "longDescription": "This climbing hold set is made from durable polyurethane for secure grip. It includes mounting hardware for safe installation in gyms, schools, or play areas.",
     "category": "Sports",
     "image": "/products/id12(1).jpg",
-    "material": "Rubber Coated Steel",
+    "material": "PU",
     "weight": { "value": 1.5, "unit": "kg" },
-    "dimensions": { "length": 4, "width": 2, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 10, "width": 5, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Pink", "hex": "#FF70A6" },
-      { "name": "Aqua", "hex": "#00F5D4" },
-      { "name": "Purple", "hex": "#8338EC" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" },
+      { "name": "Blue","hex": "#007BFF"},
+      { "name": "Green","hex": "#28A745"},
+      { "name": "Orange","hex": "#FF9500"}
     ]
   },
   {
     "id": 14,
-    "title": "Ergonomic Plastic Bicycle Handlebar Grips, Textured Pattern Surface",
+    "title": "Ergonomic Plastic Exercise Handlebar Grips, Textured Pattern Surface",
     "sku": "OTD-0019",
-    "price": "₹NA",
+    "price": "₹59",
     "shortDescription": "Durable plastic handlebar grips offering stable grip and control.",
     "longDescription": "These bicycle handlebar grips are manufactured from quality plastic material. The textured surface enhances grip stability while supporting comfortable riding.",
     "category": "Gym",
     "image": "/products/id14.jpg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 5, "width": 2, "height": 5, "unit": "cm" },
+    "material": "Non-Breakable Industrial",
+    "weight": { "value": 0.15, "unit": "kg" },
+    "dimensions": { "length": 15, "width": 3.2, "height": 0.3, "unit": "cm" },
     "colors": [
-      { "name": "Indigo", "hex": "#3A0CA3" },
-      { "name": "Peach", "hex": "#FFB703" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 15,
     "title": "Outdoor Top Cap",
     "sku": "OTD-0021",
-    "price": "₹NA",
-    "shortDescription": "High-visibility outdoor top cap designed for safety applications.",
-    "longDescription": "This outdoor top cap is designed for use in construction and industrial environments. Its bright color improves visibility while supporting general safety compliance.",
+    "price": "₹29",
+    "shortDescription": "Outdoor top cap designed for safety applications.",
+    "longDescription": "This outdoor top cap is designed for use in construction and industrial environments.",
     "category": "Gym",
     "image": "/products/id15.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable Industrial",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 4, "width": 4, "height": 4, "unit": "cm" },
+    "dimensions": { "length": 8.8, "width": 8.8, "height": 0.2, "unit": "cm" },
     "colors": [
-      { "name": "Safety Orange", "hex": "#F48C06" },
-      { "name": "Neon Green", "hex": "#38B000" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 16,
-    "title": "MS - Seat Anti-Slip Exercise Mat, Grey Textured Surface with Raised Dots, Fitness Training Pad",
+    "title": "MS - Seat Anti-Slip, Grey Textured Surface with Raised Dots",
     "sku": "OTD-0024",
-    "price": "₹NA",
-    "shortDescription": "Anti-slip exercise mat designed to enhance stability during workouts.",
-    "longDescription": "This exercise mat features a textured surface with raised dots for improved traction. It helps prevent movement during yoga, pilates, and general fitness training.",
+    "price": "₹199",
+    "shortDescription": "Anti-slip exercise seat designed to enhance stability during workouts.",
+    "longDescription": "This exercise seat features a textured surface with raised dots for improved traction. It helps prevent movement during general fitness training.",
     "category": "Gym",
     "image": "/products/id16.jpg",
-    "material": "Rubber Coated Steel",
-    "weight": { "value": 1.5, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 10, "height": 0.2, "unit": "cm" },
+    "material": "Mild Steel",
+    "weight": { "value": 1.6, "unit": "kg" },
+    "dimensions": { "length": 30.5, "width": 25, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Ash Grey", "hex": "#ADB5BD" },
-      { "name": "Ocean Blue", "hex": "#0077B6" }
+      {"name": "Steel Gray","hex": "#71797E"}
     ]
   },
   {
     "id": 17,
-    "title": "Marry go Round Plastic Seat",
+    "title": "Merry Go Round Seat",
     "sku": "OTD-0026",
-    "price": "₹NA",
-    "shortDescription": "Plastic seating component designed for merry-go-round installations.",
-    "longDescription": "These plastic seats are designed for use in merry-go-round play equipment. They offer durability and visibility for safe use in playground environments.",
+    "price": "₹549",
+    "shortDescription": "FRP seating component designed for merry-go-round installations.",
+    "longDescription": "These FRP seats are designed for use in merry-go-round play equipment. They offer durability and visibility for safe use in playground environments.",
     "category": "Sports",
     "image": "/products/id17.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "FRP",
     "weight": { "value": 1.2, "unit": "kg" },
-    "dimensions": { "length": 14, "width": 12, "height": 3, "unit": "cm" },
+    "dimensions": { "length": 35.5, "width": 30.48, "height": 7.6, "unit": "cm" },
     "colors": [
-      { "name": "Red Orange", "hex": "#E85D04" },
-      { "name": "Turquoise", "hex": "#06D6A0" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Blue","hex": "#007BFF"}
     ]
   },
   {
     "id": 18,
-    "title": "Blow Moduling Plastic Seat",
+    "title": "Double Layer Blow Mouldling Plastic Seat",
     "sku": "OTD-0025",
-    "price": "₹NA",
+    "price": "₹449",
     "shortDescription": "Blow-moulded plastic seat suitable for indoor and outdoor use.",
     "longDescription": "This plastic seat is manufactured using blow moulding technology for durability. It features a textured surface and mounting points for secure installation.",
     "category": "Gym",
     "image": "/products/id18.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "HDPE , LDPE",
     "weight": { "value": 0.9, "unit": "kg" },
-    "dimensions": { "length": 12, "width": 12, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 30.5, "width": 30.5, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Cyan", "hex": "#00B4D8" },
-      { "name": "Warm Grey", "hex": "#8D99AE" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 19,
     "title": "World's Fastest Ball Thrower (Adjustment)",
     "sku": "OTD-0031",
-    "price": "₹NA",
+    "price": "₹189",
     "shortDescription": "Ergonomic ball thrower designed to maximise throwing distance.",
     "longDescription": "This ball thrower features a curved handle to enhance throwing range with minimal effort. The textured grip ensures comfortable handling during extended play sessions.",
     "category": "Sports",
     "image": "/products/id19.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable",
     "weight": { "value": 0.5, "unit": "kg" },
-    "dimensions": { "length": 20, "width": 2, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 50, "width": 5, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Electric Blue", "hex": "#3A86FF" },
-      { "name": "Bright Yellow", "hex": "#FFBE0B" }
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" },
+      { "name": "Blue", "hex": "#007BFF" }
     ]
   },
   {
     "id": 20,
     "title": "World's Fastest Ball Thrower (Plain)",
     "sku": "OTD-0034",
-    "price": "₹NA",
+    "price": "₹69",
     "shortDescription": "Side-arm cricket ball thrower designed for batting practice.",
     "longDescription": "This side-arm cricket ball thrower simulates realistic bowling actions. It supports consistent deliveries to improve batting timing and reaction speed.",
     "category": "Sports",
     "image": "/products/id20.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable",
     "weight": { "value": 0.3, "unit": "kg" },
-    "dimensions": { "length": 18, "width": 0.2, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 50, "width": 5, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Jet Black", "hex": "#212529" },
-      { "name": "Royal Blue", "hex": "#1D4ED8" }
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" },
+      { "name": "Blue", "hex": "#007BFF" }
     ]
   },
   {
     "id": 21,
     "title": "Gym Cable Ball Stopper Replacement, Lifting Cable Joint Part",
     "sku": "IND-002",
-    "price": "₹NA",
+    "price": "₹25",
     "shortDescription": "Durable nylon ball stopper designed for secure cable positioning in gym machines.",
     "longDescription": "This gym cable ball stopper features a 40 mm diameter with a 10 mm center hole for secure cable fit. Made from high-quality hard nylon, it provides impact resistance and long-term durability for regular gym use.",
     "category": "Gym",
     "image": "/products/id21.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Non-Breakable Industrial",
     "weight": { "value": 0.05, "unit": "kg" },
-    "dimensions": { "length": 2, "width": 2, "height": 2, "unit": "cm" },
+    "dimensions": { "length": 5, "width": 5, "height": 5, "unit": "cm" },
     "colors": [
-      { "name": "Ivory", "hex": "#F8F9FA" },
-      { "name": "Dark Grey", "hex": "#495057" }
+      { "name": "White", "hex": "#FFFFFF" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 22,
-    "title": "Industrial Round Handle Bolt with Yellow Grip",
+    "title": "Round Handle Catcher Lock With Grip",
     "sku": "IND-001",
-    "price": "₹NA",
+    "price": "₹49",
     "shortDescription": "Round-handle bolt with plastic grip for secure fastening in gym and industrial equipment.",
     "longDescription": "This round-handle bolt features a yellow plastic grip for easy handling and a metal threaded shaft for reliable fastening. Suitable for gym machines and industrial mounting applications.",
     "category": "Gym",
     "image": "/products/id22.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Mild Steel",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 3, "width": 0.1, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 7.5, "width": 0.25, "height": 0.5, "unit": "cm" },
     "colors": [
       { "name": "Yellow", "hex": "#FFD60A" },
-      { "name": "Graphite Grey", "hex": "#6C757D" }
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   },
   {
     "id": 23,
-    "title": "T Shape Capture Lock Spring, 3 Inch",
+    "title": "T Shape Catcher Spring Lock, 3 Inch",
     "sku": "IND-006",
-    "price": "₹NA",
-    "shortDescription": "3-inch T-shape capture lock spring for secure gym machine assembly.",
-    "longDescription": "This 3-inch T shape capture lock spring is designed to provide secure locking in gym machines. Built with durable material, it ensures stability during regular equipment use.",
+    "price": "₹49",
+    "shortDescription": "3-inch T-shape catcher lock spring for secure gym machine assembly.",
+    "longDescription": "This 3-inch T shape catcher lock spring is designed to provide secure locking in gym machines. Built with durable material, it ensures stability during regular equipment use.",
     "category": "Gym",
     "image": "/products/id23.jpg",
-    "material": "Rubber Coated Steel",
+    "material": "Mild Steel",
     "weight": { "value": 0.1, "unit": "kg" },
-    "dimensions": { "length": 3, "width": 0.2, "height": 0.2, "unit": "cm" },
+    "dimensions": { "length": 7.5, "width": 0.25, "height": 0.5, "unit": "cm" },
     "colors": [
-      { "name": "Metallic Grey", "hex": "#ADB5BD" },
-      { "name": "Deep Blue", "hex": "#023E8A" }
+      { "name": "Yellow", "hex": "#FFD60A" },
+      { "name": "Red", "hex": "#C1121F" },
+      { "name": "Black", "hex": "#000000" }
     ]
   }
 ]

@@ -218,12 +218,18 @@ const handleRequestQuote = () => {
                 Manufacturer of precision gym & sports equipment spare parts in India since 1995
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="btn-premium btn-primary shadow-2xl shadow-blue-500/30">
-                  Explore Catalog
-                </button>
-                <button className="btn-premium btn-outline px-12">
-                  Our Legacy
-                </button>
+                <Link
+                href="/products"
+                className="btn-premium btn-primary shadow-2xl shadow-blue-500/30 group"
+              >
+                Explore Catalog
+              </Link>
+              <Link
+                href="/about"
+                className="btn-premium btn-outline px-12"
+              >
+                Our Legacy
+              </Link>
               </div>
             </motion.div>
           </main>
