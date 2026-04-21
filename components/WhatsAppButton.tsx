@@ -49,7 +49,7 @@ export default function WhatsAppButton({
 
   const prefillMessage = () => {
     if (!name && !sku)
-      return `Hello! I'm interested in your products at GRYP.FIT. Please sare more details about pricing, availability, and lead time.`;
+      return `Hello! I'm interested in your products at GRYP.FIT. Please share more details about pricing, availability, and lead time.`;
     let msg = "";
     if (name) msg += `${name}`;
     if (sku) msg += ` (SKU: ${sku})`;
@@ -63,19 +63,23 @@ export default function WhatsAppButton({
   if (floating) {
     if (!visible) return null;
 
+    // Adjust position when inquiry bar is visible to avoid overlap
+    const bottomPosition = 24; // pixels from bottom
+
     return (
       <div
         aria-hidden={!visible}
         style={{
-          transition: "transform 180ms ease, opacity 180ms ease",
+          transition: "transform 180ms ease, opacity 180ms ease, bottom 300ms ease",
           transform: visible
             ? "translateY(0) scale(1)"
             : "translateY(12px) scale(0.98)",
           opacity: visible ? 1 : 0,
           pointerEvents: visible ? "auto" : "none",
+          bottom: `${bottomPosition}px`,
           ...style,
         }}
-        className={`fixed bottom-6 right-6 z-[1000] ${className}`}
+        className={`fixed right-6 z-[1000] ${className}`}
       >
         <a
           href={waUrl}

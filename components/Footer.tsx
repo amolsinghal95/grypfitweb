@@ -61,15 +61,18 @@ export default function Footer() {
             </Link>
 
             <p className="text-white/55 font-medium leading-relaxed mb-6 max-w-xs">
-              Precision-engineered components for global fitness brands since 1995.
+              GRYP.FIT by Singhal Industries manufactures precision-engineered spare parts for sports and fitness brands across India.
             </p>
 
             <div className="flex items-center gap-3 text-white/40">
               <Icons.Globe />
               <span className="text-[11px] font-semibold uppercase tracking-widest">
-                Meerut, India
+                Mohkampur Phase 1, Meerut, India
               </span>
             </div>
+            <p className="text-white/45 text-xs font-medium leading-relaxed mt-4 max-w-xs">
+              GRYP.FIT by Singhal Industries, Mohkampur Phase 1, Meerut, India
+            </p>
           </div>
 
           {/* Products */}
@@ -81,7 +84,7 @@ export default function Footer() {
               {[
                 { n: "Gym Spare Parts", h: "/products?category=Gym" },
                 { n: "Sports Equipment", h: "/products?category=Sports" },
-                { n: "Calibrated Plates", h: "/products?category=Plates%20&%20Weights" },
+                { n: "Calibrated Plates", h: "/products?category=Plates%20%26%20Weights" },
                 { n: "Custom OEM Solutions", h: "/contact" },
               ].map(link => (
                 <li key={link.n}>

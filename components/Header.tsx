@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useInquiry } from "@/context/InquiryContext";
+import { FaShoppingCart } from "react-icons/fa";
 
 
 // --- Inline Premium Icons ---
@@ -41,6 +43,7 @@ const Icons = {
 const navLinks = [
   { name: "Home", href: "/", icon: <Icons.Home size={18} /> },
   { name: "Products", href: "/products", icon: <Icons.LayoutGrid size={18} /> },
+  { name: "Blog", href: "/blog", icon: <Icons.Info size={18} /> },
   { name: "About", href: "/about", icon: <Icons.Info size={18} /> },
   { name: "Contact", href: "/contact", icon: <Icons.Phone size={18} /> },
 ];
@@ -48,7 +51,17 @@ const navLinks = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const inquiry = useInquiry();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const openCart = () => {
+    window.dispatchEvent(new CustomEvent('open-inquiry-cart'));
+  };
 
   const router = useRouter();
 
@@ -69,6 +82,20 @@ const handleRequestQuote = () => {
   }, []);
 
   useEffect(() => setIsOpen(false), [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const resetToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      setScrolled(false);
+    };
+
+    resetToTop();
+
+    const frame = window.requestAnimationFrame(resetToTop);
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname]);
 
   return (
     <>
@@ -128,15 +155,41 @@ const handleRequestQuote = () => {
           </nav>
 
           {/* Global Action Section */}
-          
+          <div className="hidden lg:flex items-center gap-4">
+            <Link
+              href="/cart"
+              className="flex items-center gap-2 px-3 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all"
+            >
+              <FaShoppingCart size={16} className="text-primary" />
+              <span className="text-sm font-bold text-primary">Cart</span>
+              {mounted && inquiry && inquiry.items.length > 0 && (
+                <span className="bg-accent text-white px-2 py-1 rounded text-xs font-bold">
+                  {inquiry.items.length}
+                </span>
+              )}
+            </Link>
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden w-12 h-12 flex items-center justify-center text-primary bg-white rounded-2xl transition-all active:scale-90 border border-slate-200 shadow-sm"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <Icons.X size={24} /> : <Icons.Menu size={24} />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2">
+            <Link
+              href="/cart"
+              className="lg:hidden flex items-center justify-center w-10 h-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg hover:bg-white/20 transition-all"
+            >
+              <FaShoppingCart size={16} className="text-primary" />
+              {mounted && inquiry && inquiry.items.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-accent text-white w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold">
+                  {inquiry.items.length}
+                </span>
+              )}
+            </Link>
+            <button
+              className="lg:hidden w-12 h-12 flex items-center justify-center text-primary bg-white rounded-2xl transition-all active:scale-90 border border-slate-200 shadow-sm"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <Icons.X size={24} /> : <Icons.Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Overlay */}
@@ -194,50 +247,6 @@ const handleRequestQuote = () => {
         </AnimatePresence>
       </header>
 
-      {/* 2. THE HERO SECTION (Only Visible on Home Page) */}
-      {pathname === "/" && (
-        <div className="min-h-screen bg-[#fcfdfe] selection:bg-blue-100 selection:text-blue-600">
-          <main className="container mx-auto px-6 py-40">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-4xl"
-            >
-              <div className="flex items-center gap-3 mb-8">
-                <span className="h-px w-12 bg-accent/30" />
-                <span className="text-xs font-black uppercase tracking-[0.4em] text-accent">
-                  Precision. Strength. Trust.
-                </span>
-              </div>
-              <h1 className="text-7xl md:text-[10rem] font-black text-primary leading-[0.85] tracking-tighter mb-12">
-                PRECISION<br />
-                <span className="text-gradient">THAT LASTS.</span>
-              </h1>
-              <p className="text-2xl text-muted font-medium leading-relaxed max-w-2xl mb-12">
-                Manufacturer of precision gym & sports equipment spare parts in India since 1995
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                href="/products"
-                className="btn-premium btn-primary shadow-2xl shadow-blue-500/30 group"
-              >
-                Explore Catalog
-              </Link>
-              <Link
-                href="/about"
-                className="btn-premium btn-outline px-12"
-              >
-                Our Legacy
-              </Link>
-              </div>
-            </motion.div>
-          </main>
-          
-          {/* Decorative Background Element */}
-          <div className="fixed top-0 right-0 -z-10 w-1/2 h-screen bg-gradient-to-bl from-blue-50/50 to-transparent pointer-events-none" />
-        </div>
-      )}
     </>
   );
 }

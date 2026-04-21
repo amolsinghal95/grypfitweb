@@ -60,7 +60,7 @@ export default function Contact() {
               CONTACT<br></br> <span className="text-gradient">GRYP.FIT</span>
             </h1>
             <p className="text-2xl text-muted font-medium leading-relaxed max-w-2xl">
-              Discuss your custom requirements, bulk orders, or technical specifications with our engineering team.
+              Discuss your custom requirements, bulk orders, or technical specifications with GRYP.FIT by Singhal Industries in Meerut, India.
             </p>
           </motion.div>
         </div>
@@ -75,7 +75,7 @@ export default function Contact() {
               {[
                 {
                   label: "Reach Us",
-                  val: "GRYP.FIT, Mohkampur Phase 1, Meerut, India",
+                  val: "GRYP.FIT by Singhal Industries, Mohkampur Phase 1, Meerut, India",
                   icon: <Icons.MapPin />,
                   href: "https://maps.app.goo.gl/25tqn6RxRwyZw76q7"
                 },

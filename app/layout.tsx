@@ -5,13 +5,27 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton"; // global floating instance
+import { InquiryProvider } from "@/context/InquiryContext";
+import InquiryBar from "@/components/InquiryBar";
+import {
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildWebSiteSchema,
+} from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const structuredData = [
+  buildOrganizationSchema(),
+  buildLocalBusinessSchema(),
+  buildWebSiteSchema(),
+];
 
 export const metadata: Metadata = {
-  title: "GRYP.FIT | Gym & Sports Equipment Spare Parts Manufacturer in India",
+  metadataBase: new URL(SITE_URL),
+  title: "GRYP.FIT",
   description:
-    "GRYP.FIT is a trusted Indian manufacturer of gym and sports equipment spare parts. Precision-engineered components for fitness machines since 1995.",
+    "GRYP.FIT by Singhal Industries manufactures and supplies gym and sports equipment spare parts from Meerut, India for OEM, wholesale, and bulk requirements.",
   keywords: [
     "gym parts",
     "gym equipment",
@@ -19,18 +33,28 @@ export const metadata: Metadata = {
     "spare parts",
     "manufacturing",
     "India",
+    "Meerut",
+    "manufacturer",
+    "supplier",
     "pulleys",
     "weights",
     "plates",
   ],
-  authors: [{ name: "GRYP.FIT - Singhal Industries" }],
+  authors: [{ name: "GRYP.FIT by Singhal Industries" }],
   openGraph: {
-    title: "GRYP.FIT | Gym & Sports Equipment Spare Parts Manufacturer in India",
-    description: "Trusted Indian manufacturer of gym and sports equipment spare parts since 1995.",
-    url: "https://gryp.fit",
+    title: "GRYP.FIT",
+    description:
+      "GRYP.FIT by Singhal Industries manufactures and supplies gym and sports equipment spare parts from Meerut, India.",
+    url: SITE_URL,
     siteName: "GRYP.FIT",
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GRYP.FIT",
+    description:
+      "GRYP.FIT by Singhal Industries manufactures and supplies gym and sports equipment spare parts from Meerut, India.",
   },
 };
 
@@ -41,14 +65,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <InquiryProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
 
-        {/* Global floating WhatsApp button.
-            Make sure your WhatsAppButton handles `floating` prop (if not, I can patch it). */}
-        <WhatsAppButton floating phone="918449291260" />
+          {/* Global floating WhatsApp button */}
+          <WhatsAppButton floating phone="918449291260" />
+          
+          {/* Floating inquiry bar */}
+          <InquiryBar />
+        </InquiryProvider>
       </body>
     </html>
   );

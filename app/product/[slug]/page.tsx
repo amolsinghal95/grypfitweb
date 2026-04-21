@@ -5,6 +5,11 @@ export const dynamic = "force-dynamic";
 import products from "@/data/products.json";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
+import {
+  findProductByIdentifier,
+  slugifyProductTitle,
+} from "@/lib/productLookup";
 
 interface Product {
   id: number;
@@ -14,6 +19,8 @@ interface Product {
   longDescription?: string;
   category: string;
   image: string;
+  usage?: string;
+  application?: string;
 }
 
 /* ================= SEO METADATA ================= */
@@ -24,9 +31,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const product = (products as Product[]).find(
-    (p) => p.sku.toLowerCase() === slug.toLowerCase()
-  );
+  const product = findProductByIdentifier(slug) as Product | undefined;
 
   if (!product) {
     return {
@@ -35,30 +40,28 @@ export async function generateMetadata({
     };
   }
 
-  const imageUrl = product.image.startsWith("http")
-    ? product.image
-    : `https://www.gryp.fit${product.image}`;
+  const canonicalPath = `/products/${slugifyProductTitle(product.title)}`;
 
   return {
-    title: `${product.title} | GRYP.FIT`,
-    description: product.shortDescription,
-    robots: "index, follow",
-
-    openGraph: {
+    ...buildMetadata({
       title: `${product.title} | GRYP.FIT`,
       description: product.shortDescription,
-      type: "website",
-      locale: "en_IN",
-      images: [
-        {
-          url: imageUrl,
-          alt: product.title,
-        },
+      path: canonicalPath,
+      keywords: [
+        product.title,
+        product.sku,
+        product.category,
+        "gym equipment spare parts",
+        "sports equipment components",
       ],
+      image: product.image,
+    }),
+    robots: {
+      index: false,
+      follow: false,
     },
-
     alternates: {
-      canonical: `https://www.gryp.fit/product/${product.sku.toLowerCase()}`,
+      canonical: canonicalPath,
     },
   };
 }
@@ -71,9 +74,7 @@ export default async function ProductPage({
 }) {
   const { slug } = await params;
 
-  const product = (products as Product[]).find(
-    (p) => p.sku.toLowerCase() === slug.toLowerCase()
-  );
+  const product = findProductByIdentifier(slug) as Product | undefined;
 
   if (!product) {
     notFound();
@@ -82,6 +83,23 @@ export default async function ProductPage({
   const imageUrl = product.image.startsWith("http")
     ? product.image
     : `https://www.gryp.fit${product.image}`;
+  const additionalProperty = [];
+
+  if (product.usage) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Usage",
+      value: product.usage,
+    });
+  }
+
+  if (product.application) {
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name: "Application",
+      value: product.application,
+    });
+  }
 
   return (
     <main className="max-w-4xl mx-auto py-16">
@@ -106,6 +124,7 @@ export default async function ProductPage({
               "@type": "Organization",
               name: "Singhal Industries",
             },
+            additionalProperty,
             offers: {
               "@type": "Offer",
               availability: "https://schema.org/InStock",

@@ -106,9 +106,12 @@ export default function About() {
               className="relative rounded-[3rem] overflow-hidden shadow-2xl group"
             >
               <img
-          src="/images/aboutusimage.png"
-          className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000"
-        />
+                src="/images/aboutusimage.png"
+                alt="Manufacturing facility of GRYP.FIT by Singhal Industries in Meerut"
+                loading="lazy"
+                decoding="async"
+                className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-1000"
+              />
 
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
 
