@@ -167,8 +167,8 @@ export default function HomePage() {
             </div>
 
             <h2 className="text-5xl md:text-7xl font-black text-primary leading-[0.9] tracking-tighter mb-8">
-              Built for Scale. <br />
-              <span className="text-gradient">Trusted for Quality.</span>
+              Built for <span className="text-gradient"> Scale</span><br/> Trusted for 
+              <span className="text-gradient"> Quality.</span>
             </h2>
 
             <p className="text-lg md:text-xl text-muted font-medium leading-relaxed max-w-2xl mb-6">
@@ -182,15 +182,15 @@ export default function HomePage() {
             <div className="mt-12 grid grid-cols-3 gap-8 border-t border-slate-100 pt-8">
               <div>
                 <span className="block text-3xl font-black text-primary">30+</span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Years Experience</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white">Years Experience</span>
               </div>
               <div>
                 <span className="block text-3xl font-black text-primary">500+</span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Active SKUs</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white">Active SKUs</span>
               </div>
               <div>
                 <span className="block text-3xl font-black text-primary">India</span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-muted">Supply Network</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-white">Supply Network</span>
               </div>
             </div>
           </motion.div>
@@ -202,20 +202,28 @@ export default function HomePage() {
             className="relative hidden lg:block"
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-              <Image
-                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1000"
-                alt="Industrial gym manufacturing"
-                width={600}
-                height={600}
-                className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-1000"
-                priority={true}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-              <div className="absolute bottom-10 left-10 text-white">
-                <span className="text-xs font-bold uppercase tracking-[0.3em] opacity-80 mb-2 block">Manufacturing Support</span>
-                <h3 className="text-4xl font-black tracking-tighter">Precision Components</h3>
-              </div>
-            </div>
+  <Image
+    src="/images/homepage.png" // <-- your real image (host locally)
+    alt="Precision manufacturing of gym equipment components"
+    width={600}
+    height={600}
+    className="w-full h-[600px] object-cover object-center hover:scale-105 transition-transform duration-1000"
+    priority={true}
+  />
+
+  {/* Dark overlay (fix this — current one is too “UI fake”) */}
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+  {/* Text */}
+  <div className="absolute bottom-10 left-10 text-white">
+    <span className="text-xl font-bold uppercase tracking-[0.25em] opacity-100 mb-2 block">
+      Manufacturing Capability
+    </span>
+    <span className="text-l font-bold uppercase tracking-[0.15em] opacity-100 mb-2 block">
+      Precision Engineered Parts
+    </span>
+  </div>
+</div>
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
@@ -239,7 +247,7 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <span className="text-xs font-black uppercase tracking-[0.4em] text-accent mb-4 block">Product Categories</span>
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-primary">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-black">
                 Our <span className="text-gradient">Product Range</span>
               </h2>
             </motion.div>
@@ -247,7 +255,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="max-w-md text-lg text-black font-large"
+              className="max-w-md text-lg text-white font-large"
             >
               Explore a wide range of gym and sports equipment components designed for performance, durability, and compatibility.
             </motion.p>
@@ -297,13 +305,13 @@ export default function HomePage() {
               className="relative"
             >
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-primary mb-8">
-                Why Businesses <br />
-                <span className="text-gradient">Choose Gryp.Fit</span>
+                Why Businesses <br />Choose
+                <span className="text-gradient"> Gryp.Fit</span>
               </h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 {whyChooseUs.map((item, idx) => (
                   <div key={idx} className="flex gap-6">
-                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent">
+                    <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 text-white">
                       <Icons.Check />
                     </div>
                     <div>

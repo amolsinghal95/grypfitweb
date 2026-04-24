@@ -109,13 +109,14 @@ const handleRequestQuote = () => {
           
           {/* Branding Area */}
           <Link href="/" className="group flex items-center space-x-4">
-            <motion.div 
-              whileHover={{ rotate: 15, scale: 1.1 }}
-              className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-500/20 ring-1 ring-white/20 relative overflow-hidden"
-            >
-              <span className="font-black text-2xl italic tracking-tighter z-10">G</span>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50" />
-            </motion.div>
+  <motion.img
+    src="/images/logo.jpeg" // ← your image path
+    alt="GRYP.FIT Logo"
+    className="w-12 h-12 object-contain"
+    whileHover={{ rotate: 8, scale: 1.05 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  />
+
             <div className="flex flex-col -space-y-1">
               <span className="text-2xl font-black tracking-tighter text-primary flex items-center">
                 GRYP<span className="text-accent">.</span>FIT

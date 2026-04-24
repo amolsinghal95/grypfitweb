@@ -80,7 +80,6 @@ export async function downloadProductPdf(product: ProductPdfData) {
       const resp = await fetch(CDN);
       if (resp.ok) {
         const js = await resp.text();
-        // eslint-disable-next-line no-new-func
         new Function("pdfMake", js)(pdfMake);
         if (
           (pdfMake as any).vfs &&
@@ -95,16 +94,38 @@ export async function downloadProductPdf(product: ProductPdfData) {
   }
 
   const imageData = await fetchImageAsDataUrl(product.image).catch(() => null);
+
+  // ✅ ADDED LOGO (ONLY CHANGE)
+  const logoData = await fetchImageAsDataUrl("/images/logo.jpeg").catch(() => null);
+
   const content: any[] = [];
 
+  // ✅ UPDATED HEADER (LOGO + TITLE)
   content.push({
     columns: [
-      { text: product.title ?? "Product Specs", style: "headerLeft" },
-      imageData
-        ? { image: imageData, width: 120, alignment: "right" }
-        : { text: "", width: 120 },
+      logoData
+        ? { image: logoData, width: 60 }
+        : { text: "" },
+      {
+        text: product.title ?? "Product Specs",
+        style: "headerLeft",
+        alignment: "right",
+      },
     ],
   });
+
+  content.push({ text: "\n" });
+
+  // ✅ MOVED PRODUCT IMAGE BELOW (UNCHANGED LOGIC)
+  content.push({
+    columns: [
+      { text: "" },
+      imageData
+        ? { image: imageData, width: 180, alignment: "right" }
+        : { text: "", width: 180 },
+    ],
+  });
+
   content.push({ text: "\n" });
 
   content.push({
@@ -122,6 +143,7 @@ export async function downloadProductPdf(product: ProductPdfData) {
       },
     ],
   });
+
   content.push({ text: "\n" });
 
   content.push({ text: "Short Description", style: "sectionTitle" });
@@ -184,6 +206,7 @@ export async function downloadProductPdf(product: ProductPdfData) {
     style: "sectionTitle",
     margin: [0, 6, 0, 6],
   });
+
   content.push({
     table: { widths: ["auto", "*"], body: specBody },
     layout: {
@@ -194,13 +217,15 @@ export async function downloadProductPdf(product: ProductPdfData) {
 
   const website =
     typeof window !== "undefined" ? window.location.origin : "https://gryp.fit";
-  const emailEnv = process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "business@gryp.fit";
+  const emailEnv =
+    process.env.NEXT_PUBLIC_BUSINESS_EMAIL || "business@gryp.fit";
 
   content.push({
     text: "Contact",
     style: "sectionTitle",
     margin: [0, 6, 0, 6],
   });
+
   content.push({
     columns: [
       { text: "Phone: +918449291260", style: "contactText" },
@@ -278,7 +303,9 @@ export async function downloadProductPdf(product: ProductPdfData) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = filename.endsWith(".pdf") ? filename : `${filename}.pdf`;
+    a.download = filename.endsWith(".pdf")
+      ? filename
+      : `${filename}.pdf`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -286,5 +313,7 @@ export async function downloadProductPdf(product: ProductPdfData) {
     return;
   }
 
-  pdfGenerator.download(filename.endsWith(".pdf") ? filename : `${filename}.pdf`);
+  pdfGenerator.download(
+    filename.endsWith(".pdf") ? filename : `${filename}.pdf`
+  );
 }

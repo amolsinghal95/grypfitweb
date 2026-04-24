@@ -52,9 +52,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="group flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-slate-950 transition-transform duration-300 group-hover:rotate-6">
-                <span className="font-black text-xl italic">G</span>
-              </div>
+              <motion.img
+                  src="/images/logo.jpeg" // ← your image path
+                  alt="GRYP.FIT Logo"
+                  className="w-12 h-12 object-contain"
+                  whileHover={{ rotate: 8, scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                />
               <span className="text-2xl font-black tracking-tight">
                 GRYP<span className="text-accent">.</span>FIT
               </span>

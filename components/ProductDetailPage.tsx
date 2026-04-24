@@ -203,7 +203,7 @@ export default function ProductDetailPage({ product, relatedProducts }: ProductD
             {/* Specifications - 2x2 Grid with equal-sized cells */}
             <div className="grid grid-cols-2 gap-4 mb-8">
               {specs.length > 0 && (
-                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full">
+                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full min-h-[64px]">
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     <Icons.Weight />
                   </div>
@@ -216,7 +216,7 @@ export default function ProductDetailPage({ product, relatedProducts }: ProductD
                 </div>
               )}
               {specs.length > 1 && (
-                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full">
+                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full min-h-[64px]">
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     <Icons.Ruler />
                   </div>
@@ -229,7 +229,7 @@ export default function ProductDetailPage({ product, relatedProducts }: ProductD
                 </div>
               )}
               {product.material && (
-                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full">
+                <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl h-full min-h-[64px]">
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                     <Icons.Package />
                   </div>
@@ -242,25 +242,34 @@ export default function ProductDetailPage({ product, relatedProducts }: ProductD
                 </div>
               )}
               {/* 4th slot - Share & Download buttons (same height as other cells) */}
-              <div className="flex flex-col gap-1 p-3 bg-slate-50 rounded-xl h-full justify-center">
-                <button
-                  onClick={() => setShareOpen(true)}
-                  className="flex items-center justify-center gap-1.5 py-1.5 bg-white rounded-lg hover:bg-primary hover:text-white transition-colors group flex-1"
-                >
-                  <FaShareSquare className="text-primary group-hover:text-white text-xs" />
-                  <span className="text-[10px] font-bold text-primary group-hover:text-white">Share</span>
-                </button>
-                <button
-                  onClick={handleDownloadPdf}
-                  disabled={loadingPdf}
-                  className="flex items-center justify-center gap-1.5 py-1.5 bg-white rounded-lg hover:bg-primary hover:text-white transition-colors group flex-1 disabled:opacity-50"
-                >
-                  <FaDownload className="text-primary group-hover:text-white text-xs" />
-                  <span className="text-[10px] font-bold text-primary group-hover:text-white">
-                    {loadingPdf ? '...' : 'PDF'}
-                  </span>
-                </button>
-              </div>
+              <div className="flex flex-col gap-2 p-3 bg-slate-50 rounded-2xl h-full min-h-[64px] border border-slate-200">
+
+  {/* Buttons Row */}
+  <div className="flex flex-row gap-3">
+    
+   <button
+  onClick={() => setShareOpen(true)}
+  className="flex flex-col items-center justify-center py-2 px-2 bg-white rounded-xl border border-slate-200 hover:bg-primary hover:text-white transition-all duration-200 group flex-1 min-w-0 shadow-sm hover:shadow-md"
+>
+  <FaShareSquare className="text-primary group-hover:text-white text-sm" />
+  <span className="text-[10px] font-semibold text-primary group-hover:text-white leading-tight">
+    Share
+  </span>
+</button>
+    <button
+  onClick={handleDownloadPdf}
+  disabled={loadingPdf}
+  className="flex flex-col items-center justify-center py-2 px-2 bg-white rounded-xl border border-slate-200 hover:bg-primary hover:text-white transition-all duration-200 group flex-1 min-w-0 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+>
+  <FaDownload className="text-primary group-hover:text-white text-sm" />
+  <span className="text-[10px] font-semibold text-primary group-hover:text-white leading-tight">
+    {loadingPdf ? "..." : "PDF"}
+  </span>
+</button>
+
+  </div>
+
+</div>
             </div>
 
             {/* Additional Info */}
