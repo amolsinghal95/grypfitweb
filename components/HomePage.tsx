@@ -227,10 +227,10 @@ export default function HomePage() {
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
-              className="absolute -bottom-6 -right-6 bg-white p-8 rounded-3xl shadow-2xl border border-slate-100 z-20 max-w-[200px]"
+              className="absolute -bottom-6 -right-6 bg-white/10 border border-white/40 p-8 rounded-3xl shadow-2xl z-20 max-w-[200px]"
             >
               <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center text-white mb-4">
-                <Icons.Check />
+                
               </div>
               <p className="text-sm font-black text-primary leading-tight">Reliable support for bulk buyers, OEM partners, and distributors</p>
             </motion.div>
