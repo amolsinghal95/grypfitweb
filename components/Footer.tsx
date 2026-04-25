@@ -53,7 +53,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="group flex items-center space-x-3 mb-6">
               <motion.img
-                  src="/images/logo.jpeg" // ← your image path
+                  src="/images/newlogo1.png" // ← your image path
                   alt="GRYP.FIT Logo"
                   className="w-12 h-12 object-contain"
                   whileHover={{ rotate: 8, scale: 1.05 }}

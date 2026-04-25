@@ -225,7 +225,7 @@ export default function HomePage() {
   </div>
 </div>
             <motion.div
-              animate={{ y: [0, -20, 0] }}
+              animate={{ y: [0, -6, 0] }}
               transition={{ repeat: Infinity, duration: 4 }}
               className="absolute -bottom-6 -right-6 bg-white/10 border border-white/40 p-8 rounded-3xl shadow-2xl z-20 max-w-[200px]"
             >
@@ -322,7 +322,7 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

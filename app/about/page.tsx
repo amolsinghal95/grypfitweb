@@ -46,7 +46,7 @@ export default function About() {
           >
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className="w-12 h-[2px] bg-accent/30" />
-              <span className="text-xs font-black uppercase tracking-[0.5em] text-accent">Our Legacy</span>
+              <span className="text-xs text-white uppercase tracking-[0.5em]">Our Legacy</span>
               <span className="w-12 h-[2px] bg-accent/30" />
             </div>
             <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-primary leading-[0.85] mb-12">
@@ -119,11 +119,11 @@ export default function About() {
           <div className="flex items-center gap-4 mb-4">
             <div className="h-[2px] w-8 bg-white" />
             <span className="text-xs font-black uppercase tracking-widest text-white/70">
-              Factory Floor 2025
+              Factory Floor 2026
             </span>
           </div>
           <h3 className="text-4xl font-black text-white tracking-tighter">
-            Advanced Molding & Casting
+            Advanced Moulding & Casting
           </h3>
         </div>
 
